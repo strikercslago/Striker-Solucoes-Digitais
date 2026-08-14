@@ -1,0 +1,331 @@
+[
+  {
+    "viewport": {
+      "name": "desktop-1440",
+      "width": 1440,
+      "height": 1100,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "whatsappLinks": 4,
+      "faqOpen": true,
+      "formReady": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 24,
+        "width": 1280,
+        "height": 72
+      },
+      {
+        "id": "solucoes",
+        "top": 2782,
+        "width": 1440,
+        "height": 857
+      },
+      {
+        "id": "processo",
+        "top": 5033,
+        "width": 1440,
+        "height": 901
+      },
+      {
+        "id": "projetos",
+        "top": 5934,
+        "width": 1440,
+        "height": 1191
+      },
+      {
+        "id": "sobre",
+        "top": 8203,
+        "width": 1440,
+        "height": 875
+      },
+      {
+        "id": "contato",
+        "top": 11601,
+        "width": 1440,
+        "height": 860
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "mobile-390",
+      "width": 390,
+      "height": 1200,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "whatsappLinks": 4,
+      "menuVisible": true,
+      "menuClosed": true,
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 26,
+        "width": 346,
+        "height": 86
+      },
+      {
+        "id": "solucoes",
+        "top": 3801,
+        "width": 390,
+        "height": 1426
+      },
+      {
+        "id": "processo",
+        "top": 7291,
+        "width": 390,
+        "height": 1491
+      },
+      {
+        "id": "projetos",
+        "top": 8782,
+        "width": 390,
+        "height": 2535
+      },
+      {
+        "id": "sobre",
+        "top": 13092,
+        "width": 390,
+        "height": 1339
+      },
+      {
+        "id": "contato",
+        "top": 17391,
+        "width": 390,
+        "height": 1282
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "desktop-1280",
+      "width": 1280,
+      "height": 900
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 1280,
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "whatsappLinks": 4,
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 24,
+        "width": 1232,
+        "height": 72
+      },
+      {
+        "id": "solucoes",
+        "top": 2690,
+        "width": 1280,
+        "height": 857
+      },
+      {
+        "id": "processo",
+        "top": 4827,
+        "width": 1280,
+        "height": 815
+      },
+      {
+        "id": "projetos",
+        "top": 5642,
+        "width": 1280,
+        "height": 1191
+      },
+      {
+        "id": "sobre",
+        "top": 7751,
+        "width": 1280,
+        "height": 852
+      },
+      {
+        "id": "contato",
+        "top": 11077,
+        "width": 1280,
+        "height": 860
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "tablet-1024",
+      "width": 1024,
+      "height": 900
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "bodyWidth": 1024,
+      "whatsappLinks": 4,
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 24,
+        "width": 976,
+        "height": 72
+      },
+      {
+        "id": "solucoes",
+        "top": 2659,
+        "width": 1024,
+        "height": 1123
+      },
+      {
+        "id": "processo",
+        "top": 4941,
+        "width": 1024,
+        "height": 788
+      },
+      {
+        "id": "projetos",
+        "top": 5729,
+        "width": 1024,
+        "height": 1240
+      },
+      {
+        "id": "sobre",
+        "top": 8063,
+        "width": 1024,
+        "height": 892
+      },
+      {
+        "id": "contato",
+        "top": 11294,
+        "width": 1024,
+        "height": 880
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "tablet-768",
+      "width": 768,
+      "height": 1000
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "whatsappLinks": 4,
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 26,
+        "width": 716,
+        "height": 86
+      },
+      {
+        "id": "solucoes",
+        "top": 3694,
+        "width": 768,
+        "height": 1229
+      },
+      {
+        "id": "processo",
+        "top": 6727,
+        "width": 768,
+        "height": 1496
+      },
+      {
+        "id": "projetos",
+        "top": 8223,
+        "width": 768,
+        "height": 2132
+      },
+      {
+        "id": "sobre",
+        "top": 11961,
+        "width": 768,
+        "height": 1324
+      },
+      {
+        "id": "contato",
+        "top": 16117,
+        "width": 768,
+        "height": 1283
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "mobile-360",
+      "width": 360,
+      "height": 1000
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "bodyWidth": 360,
+      "whatsappLinks": 4,
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 26,
+        "width": 316,
+        "height": 86
+      },
+      {
+        "id": "solucoes",
+        "top": 4057,
+        "width": 360,
+        "height": 1462
+      },
+      {
+        "id": "processo",
+        "top": 7658,
+        "width": 360,
+        "height": 1517
+      },
+      {
+        "id": "projetos",
+        "top": 9175,
+        "width": 360,
+        "height": 2535
+      },
+      {
+        "id": "sobre",
+        "top": 13535,
+        "width": 360,
+        "height": 1375
+      },
+      {
+        "id": "contato",
+        "top": 17899,
+        "width": 360,
+        "height": 1302
+      }
+    ]
+  }
+]
