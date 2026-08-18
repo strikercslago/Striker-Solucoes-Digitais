@@ -15,6 +15,10 @@ Capturas geradas:
 - `scale/hero-360x800.png`
 - `scale/benefits-1440x800.png`
 - `scale/audience-1440x800.png`
+- `scale/before-benefits-1536x730.png`
+- `scale/benefits-1536x730.png`
+- `scale/benefits-top-1536x730.png`
+- `scale/audience-1536x730.png`
 - `scale/benefits-390x844.png`
 - `scale/audience-390x844.png`
 - Capturas auxiliares desktop da evolução visual: `scale/diagnosis-1440x800.png`, `scale/solutions-1440x800.png`, `scale/process-projects-1440x800.png`, `scale/social-founder-1440x800.png`, `scale/testimonial-final-1440x800.png`, `scale/contact-footer-1440x800.png`
@@ -75,6 +79,27 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 - Comparação visual obrigatória: P0/P1 corrigidos; não há seção duplicada, conteúdo cortado, overflow horizontal, ícone ausente, CTA/formulário quebrado ou texto ilegível nos viewports testados.
 - Diferenças residuais P2/P3: a intensidade do blur e do brilho dos cards varia entre navegadores por limitação normal de `backdrop-filter`; quando o navegador reduz o efeito, o fallback mantém gradiente, borda e contraste.
 
+## Correção de escala O que muda / Para quem é
+
+- Captura antes da correção: `scale/before-benefits-1536x730.png`.
+- Capturas depois da correção: `scale/benefits-1536x730.png`, `scale/benefits-top-1536x730.png`, `scale/audience-1536x730.png`, `scale/benefits-390x844.png` e `scale/audience-390x844.png`.
+- Em 1536 x 730 CSS, a seção "O que muda" passou de 907px para 632px de altura. Com a seção alinhada no topo, a próxima seção começa em `top=654`, portanto aparece dentro do viewport de 730px.
+- O container segue o padrão do site: `width: min(var(--container), calc(100% - 64px))`, com `--container: 1200px`; no viewport 1536 x 730 o container computado é 1200px.
+- A correção não usa `transform: scale()` nem `zoom`; os ajustes foram feitos em padding, gaps, tamanhos, alturas, sombras e elementos decorativos.
+
+Valores antes e depois em 1536 x 730 CSS:
+
+| Item | Antes | Depois |
+| --- | --- | --- |
+| Container | 1200px | 1200px |
+| Padding vertical de "O que muda" | 82px / 78px computados, com curva/padding original gerando 907px totais | 58px / 68px, 632px totais |
+| Título de "O que muda" | 48px, line-height 51.84px, max-width 940px, margin-bottom 66px | 41.472px, line-height 44.7898px, max-width 780px, margin-bottom 38px |
+| Grade de cards | 1188px, gap 24px, altura 539px | 1200px, gap 20px x 22px, altura 352px |
+| Cards | 380px x 258px, padding 34px, gap 26px, radius 22px | 385px x 166px, padding 20px 22px, gap 18px, radius 18px |
+| Cápsulas | 92px x 92px | 64px x 64px |
+| Ícones | 44px x 44px | 28px x 28px |
+| Chips de "Para quem é" | 181px x 78px, padding lateral 18px, gap 12px, ícone 32px | 195px x 68px, padding 14px 18px, gap 12px, ícone 28px |
+
 ## Correção de escala
 
 - Header reduzido e mantido como elemento estático no fluxo da página.
@@ -87,6 +112,7 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 ## Verificações técnicas
 
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
+- `npx tsc --noEmit`: aprovado após adicionar declarações locais para os bindings Cloudflare usados pelo projeto.
 - `npm test`: aprovado com Node 24 do runtime do Codex.
 - `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720, 768 x 1024, 390 x 844 e 360 x 800.
 - Checagem Playwright com movimento reduzido: `prefers-reduced-motion=true`, 39 elementos verificados, 0 ocultos por animação.

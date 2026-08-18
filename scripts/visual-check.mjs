@@ -56,6 +56,41 @@ for (const viewport of viewports) {
     iconCount: document.querySelectorAll("svg.icon").length,
     benefitsCardCount: document.querySelectorAll(".benefits .benefit-card").length,
     segmentChipCount: document.querySelectorAll(".audience .segment-chip").length,
+    scale: (() => {
+      const read = (selector) => {
+        const element = document.querySelector(selector);
+        if (!element) return null;
+        const style = getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        return {
+          width: Math.round(rect.width),
+          height: Math.round(rect.height),
+          paddingTop: style.paddingTop,
+          paddingBottom: style.paddingBottom,
+          fontSize: style.fontSize,
+          lineHeight: style.lineHeight,
+          gap: style.gap,
+          columnGap: style.columnGap,
+          rowGap: style.rowGap,
+          minHeight: style.minHeight,
+          borderRadius: style.borderRadius,
+        };
+      };
+      return {
+        container: read(".container"),
+        benefits: read(".benefits"),
+        benefitsH2: read(".benefits h2"),
+        benefitGrid: read(".benefits .benefit-grid"),
+        benefitCard: read(".benefits .benefit-card"),
+        benefitIcon: read(".benefits .benefit-icon"),
+        benefitSvg: read(".benefits .benefit-icon .icon"),
+        audience: read(".audience"),
+        audienceH2: read(".audience h2"),
+        segmentGrid: read(".audience .segment-grid"),
+        segmentChip: read(".audience .segment-chip"),
+        segmentIcon: read(".audience .segment-chip .icon"),
+      };
+    })(),
     hero: ["header", "slogan", "h1", "lead", "actions", "mockup", "strip"].reduce((acc, key) => {
       const selector = {
         header: ".site-header",
@@ -106,7 +141,11 @@ for (const viewport of viewports) {
     });
   }
 
-  if (viewport.name === "desktop-1440x800" || viewport.name === "mobile-390x844") {
+  if (
+    viewport.name === "notebook-1536x730" ||
+    viewport.name === "desktop-1440x800" ||
+    viewport.name === "mobile-390x844"
+  ) {
     await page.locator(".benefits").scrollIntoViewIfNeeded();
     await page.waitForFunction(() => document.querySelector(".benefits")?.classList.contains("is-visible"));
     await page.waitForTimeout(500);
@@ -118,6 +157,15 @@ for (const viewport of viewports) {
     await page.waitForTimeout(500);
     await page.locator(".audience").screenshot({
       path: `${outputDir}/scale/audience-${viewport.width}x${viewport.height}.png`,
+    });
+  }
+
+  if (viewport.name === "notebook-1536x730") {
+    await page.evaluate(() => window.scrollTo(0, document.querySelector(".benefits").offsetTop));
+    await page.waitForTimeout(300);
+    await page.screenshot({
+      path: `${outputDir}/scale/benefits-top-${viewport.width}x${viewport.height}.png`,
+      fullPage: false,
     });
   }
 
