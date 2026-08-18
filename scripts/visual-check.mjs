@@ -11,6 +11,7 @@ fs.mkdirSync(outputDir, { recursive: true });
 fs.mkdirSync(`${outputDir}/scale`, { recursive: true });
 
 const viewports = [
+  { name: "user-wide-1900x914", width: 1900, height: 914, screenshot: true },
   { name: "notebook-1536x730", width: 1536, height: 730, screenshot: true },
   { name: "desktop-1440x800", width: 1440, height: 800, screenshot: true },
   { name: "notebook-1366x768", width: 1366, height: 768, screenshot: true },

@@ -3618,7 +3618,9 @@ blockquote {
   }
 
   .hero {
-    min-height: 0;
+    display: flex;
+    min-height: calc(100svh - clamp(70px, 9.5vh, 86px));
+    flex-direction: column;
     padding-top: clamp(20px, 3.4vh, 34px);
   }
 
@@ -3655,19 +3657,19 @@ blockquote {
 
   .device-stage {
     width: min(700px, calc(100% - 72px));
-    height: clamp(260px, 34vh, 320px);
+    height: clamp(330px, 44vh, 410px);
   }
 
   .laptop {
     left: 7%;
-    width: clamp(460px, 39vw, 530px);
-    height: clamp(252px, 30vh, 292px);
+    width: clamp(540px, 39vw, 650px);
+    height: clamp(320px, 40vh, 370px);
   }
 
   .phone {
     right: 6%;
-    width: clamp(132px, 11vw, 154px);
-    height: clamp(244px, 29vh, 286px);
+    width: clamp(148px, 11vw, 176px);
+    height: clamp(276px, 34vh, 330px);
   }
 
   .hero::after {
@@ -3679,6 +3681,7 @@ blockquote {
     width: min(1280px, calc(100% - clamp(48px, 7vw, 96px)));
     min-height: 0;
     gap: clamp(12px, 1.5vw, 18px);
+    margin: auto auto 0;
     padding: clamp(18px, 2.4vh, 26px) clamp(34px, 5vw, 58px);
   }
 
@@ -3779,12 +3782,12 @@ blockquote {
 
   .device-stage {
     width: min(640px, calc(100% - 96px));
-    height: clamp(230px, 32vh, 270px);
+    height: clamp(318px, 47vh, 380px);
   }
 
   .laptop {
-    width: clamp(420px, 36vw, 480px);
-    height: clamp(224px, 28vh, 252px);
+    width: clamp(455px, 37vw, 520px);
+    height: clamp(282px, 40vh, 318px);
     border-width: 8px;
     border-bottom-width: 18px;
   }
@@ -3795,8 +3798,8 @@ blockquote {
   }
 
   .phone {
-    width: clamp(116px, 9.5vw, 136px);
-    height: clamp(216px, 27vh, 250px);
+    width: clamp(126px, 10vw, 148px);
+    height: clamp(250px, 37vh, 296px);
     border-width: 7px;
   }
 

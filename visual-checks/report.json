@@ -1,6 +1,121 @@
 [
   {
     "viewport": {
+      "name": "user-wide-1900x914",
+      "width": 1900,
+      "height": 914,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 1900,
+      "innerHeight": 914,
+      "devicePixelRatio": 1,
+      "clientWidth": 1900,
+      "scrollWidth": 1900,
+      "bodyWidth": 1900,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 18,
+          "bottom": 86,
+          "width": 1280,
+          "height": 68,
+          "visible": true
+        },
+        "slogan": {
+          "top": 117,
+          "bottom": 140,
+          "width": 1900,
+          "height": 23,
+          "visible": true
+        },
+        "h1": {
+          "top": 154,
+          "bottom": 281,
+          "width": 980,
+          "height": 127,
+          "visible": true
+        },
+        "lead": {
+          "top": 299,
+          "bottom": 348,
+          "width": 620,
+          "height": 49,
+          "visible": true
+        },
+        "actions": {
+          "top": 370,
+          "bottom": 418,
+          "width": 1900,
+          "height": 48,
+          "visible": true
+        },
+        "mockup": {
+          "top": 426,
+          "bottom": 828,
+          "width": 700,
+          "height": 402,
+          "visible": true
+        },
+        "strip": {
+          "top": 834,
+          "bottom": 914,
+          "width": 1280,
+          "height": 80,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 18,
+        "width": 1280,
+        "height": 68
+      },
+      {
+        "id": "solucoes",
+        "top": 2123,
+        "width": 1900,
+        "height": 837
+      },
+      {
+        "id": "processo",
+        "top": 4028,
+        "width": 1900,
+        "height": 917
+      },
+      {
+        "id": "projetos",
+        "top": 4944,
+        "width": 1900,
+        "height": 1107
+      },
+      {
+        "id": "sobre",
+        "top": 6864,
+        "width": 1900,
+        "height": 681
+      },
+      {
+        "id": "contato",
+        "top": 9590,
+        "width": 1900,
+        "height": 804
+      }
+    ]
+  },
+  {
+    "viewport": {
       "name": "notebook-1536x730",
       "width": 1536,
       "height": 730,
@@ -57,14 +172,14 @@
         },
         "mockup": {
           "top": 332,
-          "bottom": 565,
+          "bottom": 675,
           "width": 640,
-          "height": 234,
+          "height": 343,
           "visible": true
         },
         "strip": {
-          "top": 565,
-          "bottom": 633,
+          "top": 675,
+          "bottom": 743,
           "width": 1280,
           "height": 68,
           "visible": true
@@ -84,31 +199,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1834,
+        "top": 1943,
         "width": 1536,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3739,
+        "top": 3848,
         "width": 1536,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4655,
+        "top": 4765,
         "width": 1536,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6567,
+        "top": 6676,
         "width": 1536,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9277,
+        "top": 9387,
         "width": 1536,
         "height": 796
       }
@@ -172,14 +287,14 @@
         },
         "mockup": {
           "top": 331,
-          "bottom": 587,
+          "bottom": 707,
           "width": 640,
-          "height": 256,
+          "height": 376,
           "visible": true
         },
         "strip": {
-          "top": 587,
-          "bottom": 654,
+          "top": 727,
+          "bottom": 794,
           "width": 1280,
           "height": 67,
           "visible": true
@@ -207,31 +322,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1851,
+        "top": 1991,
         "width": 1440,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3756,
+        "top": 3896,
         "width": 1440,
         "height": 858
       },
       {
         "id": "projetos",
-        "top": 4614,
+        "top": 4754,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6526,
+        "top": 6666,
         "width": 1440,
         "height": 679
       },
       {
         "id": "contato",
-        "top": 9228,
+        "top": 9368,
         "width": 1440,
         "height": 796
       }
@@ -295,14 +410,14 @@
         },
         "mockup": {
           "top": 325,
-          "bottom": 571,
+          "bottom": 686,
           "width": 640,
-          "height": 246,
+          "height": 361,
           "visible": true
         },
         "strip": {
-          "top": 571,
-          "bottom": 636,
+          "top": 700,
+          "bottom": 765,
           "width": 1270,
           "height": 65,
           "visible": true
@@ -322,31 +437,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1825,
+        "top": 1954,
         "width": 1366,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3715,
+        "top": 3844,
         "width": 1366,
         "height": 853
       },
       {
         "id": "projetos",
-        "top": 4568,
+        "top": 4697,
         "width": 1366,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6416,
+        "top": 6545,
         "width": 1366,
         "height": 623
       },
       {
         "id": "contato",
-        "top": 9047,
+        "top": 9176,
         "width": 1366,
         "height": 796
       }
@@ -410,14 +525,14 @@
         },
         "mockup": {
           "top": 318,
-          "bottom": 549,
+          "bottom": 657,
           "width": 640,
-          "height": 230,
+          "height": 338,
           "visible": true
         },
         "strip": {
-          "top": 549,
-          "bottom": 612,
+          "top": 657,
+          "bottom": 720,
           "width": 1190,
           "height": 63,
           "visible": true
@@ -437,31 +552,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1791,
+        "top": 1899,
         "width": 1280,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3659,
+        "top": 3767,
         "width": 1280,
         "height": 846
       },
       {
         "id": "projetos",
-        "top": 4505,
+        "top": 4613,
         "width": 1280,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6343,
+        "top": 6451,
         "width": 1280,
         "height": 625
       },
       {
         "id": "contato",
-        "top": 8929,
+        "top": 9037,
         "width": 1280,
         "height": 796
       }

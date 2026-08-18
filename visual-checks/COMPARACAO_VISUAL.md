@@ -5,6 +5,7 @@ Ambiente: produção local `http://localhost:3000/`
 Capturas geradas:
 
 - `report.json`
+- `scale/hero-1900x914.png`
 - `scale/hero-1536x730.png`
 - `scale/hero-1440x800.png`
 - `scale/hero-1366x768.png`
@@ -14,6 +15,7 @@ Capturas geradas:
 
 ## Viewports verificados
 
+- 1900 x 914 CSS: `innerWidth=1900`, `innerHeight=914`, `devicePixelRatio=1`, sem overflow horizontal.
 - 1536 x 730 CSS: `innerWidth=1536`, `innerHeight=730`, `devicePixelRatio=1`, sem overflow horizontal.
 - 1440 x 800 CSS: `innerWidth=1440`, `innerHeight=800`, `devicePixelRatio=1`, sem overflow horizontal.
 - 1366 x 768 CSS: `innerWidth=1366`, `innerHeight=768`, `devicePixelRatio=1`, sem overflow horizontal.
@@ -32,7 +34,7 @@ Capturas geradas:
 ## Comparação por seção
 
 - Header: estático, com uma única instância e sem comportamento fixed/sticky.
-- Hero: composição reescalada para notebook Full HD em zoom 100%. Em 1536 x 730, 1440 x 800, 1366 x 768 e 1280 x 720, cabeçalho, slogan, H1, parágrafo, CTAs, mockup principal e início da faixa de benefícios aparecem na mesma primeira tela. No mobile 390 x 844, mensagem, CTAs e mockup principal aparecem como uma composição única; a faixa começa logo abaixo.
+- Hero: composição reescalada para notebook Full HD em zoom 100%. Em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768 e 1280 x 720, cabeçalho, slogan, H1, parágrafo, CTAs, mockup principal e faixa de benefícios aparecem na mesma primeira tela. No viewport 1900 x 914, a faixa termina no fundo do viewport, eliminando o espaço vazio abaixo dela. No mobile 390 x 844, mensagem, CTAs e mockup principal aparecem como uma composição única; a faixa começa logo abaixo.
 - Diagnóstico e transição: cards com ícones lineares legíveis, transição escura compacta e mobile empilhado sem cortes laterais.
 - Soluções, benefícios e público: grid desktop preservado, seis benefícios obrigatórios implementados e chips mobile em largura integral, incluindo "Prestadores de serviço".
 - Processo e projetos: timeline desktop com 7 etapas e linhas sem cruzar texto; mobile em lista vertical legível; placeholders honestos mantidos.
@@ -49,6 +51,7 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 - Header reduzido e mantido como elemento estático no fluxo da página.
 - Hero removido de uma altura mínima fixa grande e recalculado com `clamp()` para título, espaçamentos, botões e mockup.
 - Adicionada media query por altura para viewports desktop com menos de 850px úteis.
+- A faixa de benefícios passou a fechar o hero na primeira tela desktop; o espaço extra foi distribuído antes da faixa, com o mockup ampliado para manter a composição coesa.
 - Seções internas receberam compactação de padding e gaps em desktop para evitar alongamento artificial.
 - O mockup deixou de se comportar visualmente como uma segunda tela separada do texto principal.
 
@@ -56,4 +59,4 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
 - `npm test`: aprovado com Node 24 do runtime do Codex.
-- `node scripts\visual-check.mjs`: aprovado em 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720 e 390 x 844.
+- `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720 e 390 x 844.
