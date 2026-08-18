@@ -63,10 +63,10 @@
           "visible": true
         },
         "strip": {
-          "top": 834,
-          "bottom": 914,
+          "top": 828,
+          "bottom": 932,
           "width": 1280,
-          "height": 80,
+          "height": 104,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -84,31 +84,31 @@
       },
       {
         "id": "solucoes",
-        "top": 2123,
+        "top": 2163,
         "width": 1900,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 4028,
+        "top": 4068,
         "width": 1900,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4944,
+        "top": 4984,
         "width": 1900,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6864,
+        "top": 6904,
         "width": 1900,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9590,
+        "top": 9632,
         "width": 1900,
         "height": 804
       }
@@ -179,9 +179,9 @@
         },
         "strip": {
           "top": 675,
-          "bottom": 743,
+          "bottom": 767,
           "width": 1280,
-          "height": 68,
+          "height": 92,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -199,31 +199,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1943,
+        "top": 1989,
         "width": 1536,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3848,
+        "top": 3894,
         "width": 1536,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4765,
+        "top": 4811,
         "width": 1536,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6676,
+        "top": 6722,
         "width": 1536,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9387,
+        "top": 9435,
         "width": 1536,
         "height": 796
       }
@@ -293,10 +293,10 @@
           "visible": true
         },
         "strip": {
-          "top": 727,
-          "bottom": 794,
+          "top": 707,
+          "bottom": 798,
           "width": 1280,
-          "height": 67,
+          "height": 91,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -322,31 +322,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1991,
+        "top": 2017,
         "width": 1440,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3896,
+        "top": 3922,
         "width": 1440,
         "height": 858
       },
       {
         "id": "projetos",
-        "top": 4754,
+        "top": 4780,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6666,
+        "top": 6692,
         "width": 1440,
         "height": 679
       },
       {
         "id": "contato",
-        "top": 9368,
+        "top": 9396,
         "width": 1440,
         "height": 796
       }
@@ -416,10 +416,10 @@
           "visible": true
         },
         "strip": {
-          "top": 700,
-          "bottom": 765,
+          "top": 686,
+          "bottom": 775,
           "width": 1270,
-          "height": 65,
+          "height": 89,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -437,31 +437,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1954,
+        "top": 1986,
         "width": 1366,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3844,
+        "top": 3876,
         "width": 1366,
         "height": 853
       },
       {
         "id": "projetos",
-        "top": 4697,
+        "top": 4729,
         "width": 1366,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6545,
+        "top": 6577,
         "width": 1366,
         "height": 623
       },
       {
         "id": "contato",
-        "top": 9176,
+        "top": 9210,
         "width": 1366,
         "height": 796
       }
@@ -532,9 +532,9 @@
         },
         "strip": {
           "top": 657,
-          "bottom": 720,
+          "bottom": 744,
           "width": 1190,
-          "height": 63,
+          "height": 87,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -552,31 +552,31 @@
       },
       {
         "id": "solucoes",
-        "top": 1899,
+        "top": 1945,
         "width": 1280,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3767,
+        "top": 3813,
         "width": 1280,
         "height": 846
       },
       {
         "id": "projetos",
-        "top": 4613,
+        "top": 4659,
         "width": 1280,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6451,
+        "top": 6497,
         "width": 1280,
         "height": 625
       },
       {
         "id": "contato",
-        "top": 9037,
+        "top": 9085,
         "width": 1280,
         "height": 796
       }
@@ -647,9 +647,9 @@
         },
         "strip": {
           "top": 886,
-          "bottom": 992,
+          "bottom": 1028,
           "width": 350,
-          "height": 106,
+          "height": 142,
           "visible": false
         },
         "stripStartsInFirstView": false,
@@ -669,31 +669,31 @@
       },
       {
         "id": "solucoes",
-        "top": 3046,
+        "top": 3104,
         "width": 390,
         "height": 1555
       },
       {
         "id": "processo",
-        "top": 6849,
+        "top": 6907,
         "width": 390,
         "height": 1679
       },
       {
         "id": "projetos",
-        "top": 8528,
+        "top": 8586,
         "width": 390,
         "height": 2257
       },
       {
         "id": "sobre",
-        "top": 12217,
+        "top": 12275,
         "width": 390,
         "height": 1200
       },
       {
         "id": "contato",
-        "top": 16117,
+        "top": 16177,
         "width": 390,
         "height": 1252
       }

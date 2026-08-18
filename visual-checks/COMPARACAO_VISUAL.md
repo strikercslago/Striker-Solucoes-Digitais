@@ -11,6 +11,8 @@ Capturas geradas:
 - `scale/hero-1366x768.png`
 - `scale/hero-1280x720.png`
 - `scale/hero-390x844.png`
+- Capturas auxiliares desktop da evolução visual: `scale/diagnosis-1440x800.png`, `scale/solutions-1440x800.png`, `scale/process-projects-1440x800.png`, `scale/social-founder-1440x800.png`, `scale/testimonial-final-1440x800.png`, `scale/contact-footer-1440x800.png`
+- Capturas auxiliares mobile da evolução visual: `scale/mobile-diagnosis-390x844.png`, `scale/mobile-solutions-390x844.png`, `scale/mobile-final-390x844.png`
 - Capturas auxiliares de inspeção mobile: `mobile-390-finalcta-viewport.png`, `mobile-390-contact-viewport.png`, `mobile-390-footer-viewport.png`
 
 ## Viewports verificados
@@ -42,6 +44,15 @@ Capturas geradas:
 - Fundador e depoimento: foto real de Rafael sem distorção, bloco do fundador em fluxo mobile correto e depoimento mantido como placeholder honesto.
 - FAQ, CTA, formulário e rodapé: acordeão funcional, CTA compacta, formulário com validação/WhatsApp e rodapé com WhatsApp/e-mail reais.
 
+## Rodada de evolução visual premium
+
+- Hero: faixa de benefícios convertida para uma tira premium em azul-marinho profundo, com brilho central azul, separadores translúcidos, ícones em cápsulas e sombra difusa. A composição desktop permanece encaixada na primeira tela, sem voltar ao espaço vazio abaixo da faixa.
+- Diagnóstico: cards receberam gradiente branco sutil, borda azul-acinzentada, iluminação superior e um único destaque escuro controlado para reforçar hierarquia sem comprometer contraste.
+- Soluções: seis cards receberam volume, cápsulas de ícone e hover discreto; o card destacado foi preservado em gradiente azul-marinho com texto branco e brilho moderado.
+- Processo, projetos e social: círculos numerados, linhas, mockups e cards ganharam sombra/overlap mais realista sem inserir métricas, depoimentos ou empresas fictícias.
+- Depoimento, CTA e formulário: depoimento segue como placeholder honesto com botão de play volumétrico; CTA final recebeu gradiente navy e textura sutil; formulário ficou com elevação leve e foco claro.
+- Movimento: entrada por viewport com `IntersectionObserver`, deslocamento curto e stagger rápido; hover apenas em dispositivos com ponteiro fino. Com `prefers-reduced-motion: reduce`, 39 elementos animáveis foram verificados como visíveis e sem transformações.
+
 ## Resultado
 
 Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem apenas diferenças P2/P3 ligadas a nuances de mockup, ícones e microespaçamentos, sem quebrar conteúdo, responsividade ou funcionalidade.
@@ -60,3 +71,4 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
 - `npm test`: aprovado com Node 24 do runtime do Codex.
 - `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720 e 390 x 844.
+- Checagem Playwright com movimento reduzido: `prefers-reduced-motion=true`, 39 elementos verificados, 0 ocultos por animação.

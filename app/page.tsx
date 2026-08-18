@@ -314,6 +314,30 @@ export default function Home() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const revealItems = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+
+    if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+
   async function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -404,7 +428,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="diagnosis section-light" aria-labelledby="diagnostico-title">
+      <section className="diagnosis section-light reveal" aria-labelledby="diagnostico-title">
         <div className="container diagnosis-grid">
           <div>
             <p className="eyebrow">Presença digital</p>
@@ -413,7 +437,7 @@ export default function Home() {
           </div>
           <div className="problem-grid">
             {problems.map(({ icon, title, text }) => (
-              <article className="problem-card" key={title}>
+              <article className="problem-card reveal-child" key={title}>
                 <IconGlyph name={icon} />
                 <div>
                   <h3>{title}</h3>
@@ -425,7 +449,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="dark-transition">
+      <section className="dark-transition reveal">
         <div className="container narrow">
           <h2>Seu trabalho já possui valor. Sua presença digital precisa demonstrá-lo.</h2>
           <p>A STRIKER transforma experiência e diferenciais em uma estrutura digital profissional, organizada e preparada para conduzir o visitante até o contato.</p>
@@ -433,7 +457,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="solutions section-light" id="solucoes">
+      <section className="solutions section-light reveal" id="solucoes">
         <div className="container split">
           <div>
             <p className="eyebrow">Desenvolvimento de sites</p>
@@ -442,7 +466,7 @@ export default function Home() {
           </div>
           <div className="solution-grid">
             {solutionCards.map(({ icon, title, text, featured }) => (
-              <article className={featured ? "solution-card featured" : "solution-card"} key={title}>
+              <article className={featured ? "solution-card featured reveal-child" : "solution-card reveal-child"} key={title}>
                 <IconGlyph name={icon} />
                 <h3>{title}</h3>
                 <p>{text}</p>
@@ -461,13 +485,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="benefits section-tint">
+      <section className="benefits section-tint reveal">
         <div className="container centered">
           <p className="eyebrow">O que muda</p>
           <h2>Uma presença digital que trabalha a favor da sua empresa.</h2>
           <div className="benefit-grid">
             {benefits.map(([title, text, icon]) => (
-              <article className="benefit-card" key={String(title)}>
+              <article className="benefit-card reveal-child" key={String(title)}>
                 <IconGlyph name={String(icon)} />
                 <div>
                   <h3>{title}</h3>
@@ -479,7 +503,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="audience section-light">
+      <section className="audience section-light reveal">
         <div className="container audience-grid">
           <div>
             <p className="eyebrow">Para quem é</p>
@@ -495,7 +519,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="process" id="processo">
+      <section className="process reveal" id="processo">
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">Como trabalhamos</p>
@@ -504,7 +528,7 @@ export default function Home() {
           </div>
           <div className="timeline">
             {processSteps.map(([number, title, text]) => (
-              <article className="timeline-step" key={number}>
+              <article className="timeline-step reveal-child" key={number}>
                 <span>{number}</span>
                 <div>
                   <h3>{number} — {title}</h3>
@@ -520,7 +544,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="projects" id="projetos">
+      <section className="projects reveal" id="projetos">
         <div className="container project-layout">
           <div>
             <p className="eyebrow">Projetos</p>
@@ -536,7 +560,7 @@ export default function Home() {
         <p className="project-note">Em breve, novos projetos e histórias reais por aqui.</p>
       </section>
 
-      <section className="social section-tint">
+      <section className="social section-tint reveal">
         <div className="container social-grid">
           <SocialMockup />
           <div>
@@ -545,7 +569,7 @@ export default function Home() {
             <p className="section-text">A STRIKER também oferece gerenciamento estratégico de redes sociais para empresas que precisam manter uma comunicação profissional e consistente.</p>
             <div className="social-list">
               {socialItems.map(([title, text, icon]) => (
-                <article key={String(title)}>
+                <article className="reveal-child" key={String(title)}>
                   <IconGlyph name={String(icon)} />
                   <div>
                     <h3>{title}</h3>
@@ -559,7 +583,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="founder section-light" id="sobre">
+      <section className="founder section-light reveal" id="sobre">
         <div className="container founder-grid">
           <img src="/assets/rafael-gomes-fundador.png" alt="Rafael Gomes Lago, fundador da STRIKER" />
           <div>
@@ -574,7 +598,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="testimonial">
+      <section className="testimonial reveal">
         <div className="container testimonial-grid">
           <div>
             <p className="eyebrow">Experiência do cliente</p>
@@ -592,7 +616,7 @@ export default function Home() {
         <div className="container"><a className="button primary full-mobile" href="#contato" onClick={handleAnchorClick}>Quero conversar sobre meu projeto</a></div>
       </section>
 
-      <section className="faq section-light" aria-labelledby="faq-title">
+      <section className="faq section-light reveal" aria-labelledby="faq-title">
         <div className="container faq-grid">
           <div>
             <p className="eyebrow">Dúvidas antes de começar?</p>
@@ -634,7 +658,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta">
+      <section className="final-cta reveal">
         <div className="container">
           <p className="eyebrow">O próximo passo</p>
           <h2>Sua empresa já possui valor. Agora é hora de apresentá-lo da forma certa.</h2>
@@ -647,7 +671,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact section-tint" id="contato">
+      <section className="contact section-tint reveal" id="contato">
         <div className="container contact-grid">
           <div>
             <p className="eyebrow">Vamos conversar</p>
