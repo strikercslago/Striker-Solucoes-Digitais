@@ -18,7 +18,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -252,23 +252,23 @@
         "id": "processo",
         "top": 4168,
         "width": 1900,
-        "height": 917
+        "height": 776
       },
       {
         "id": "projetos",
-        "top": 5085,
+        "top": 4944,
         "width": 1900,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 7004,
+        "top": 6863,
         "width": 1900,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9733,
+        "top": 9660,
         "width": 1900,
         "height": 804
       }
@@ -293,7 +293,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -527,23 +527,23 @@
         "id": "processo",
         "top": 3818,
         "width": 1536,
-        "height": 917
+        "height": 584
       },
       {
         "id": "projetos",
-        "top": 4735,
+        "top": 4403,
         "width": 1536,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6644,
+        "top": 6312,
         "width": 1536,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9353,
+        "top": 9088,
         "width": 1536,
         "height": 794
       }
@@ -568,7 +568,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -810,23 +810,23 @@
         "id": "processo",
         "top": 3861,
         "width": 1440,
-        "height": 858
+        "height": 579
       },
       {
         "id": "projetos",
-        "top": 4719,
+        "top": 4440,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6629,
+        "top": 6349,
         "width": 1440,
         "height": 679
       },
       {
         "id": "contato",
-        "top": 9329,
+        "top": 9118,
         "width": 1440,
         "height": 794
       }
@@ -851,7 +851,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -1085,23 +1085,23 @@
         "id": "processo",
         "top": 3811,
         "width": 1366,
-        "height": 853
+        "height": 574
       },
       {
         "id": "projetos",
-        "top": 4663,
+        "top": 4385,
         "width": 1366,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6509,
+        "top": 6231,
         "width": 1366,
         "height": 623
       },
       {
         "id": "contato",
-        "top": 9139,
+        "top": 8928,
         "width": 1366,
         "height": 794
       }
@@ -1126,7 +1126,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -1360,23 +1360,23 @@
         "id": "processo",
         "top": 3703,
         "width": 1280,
-        "height": 846
+        "height": 569
       },
       {
         "id": "projetos",
-        "top": 4549,
+        "top": 4272,
         "width": 1280,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6385,
+        "top": 6108,
         "width": 1280,
         "height": 625
       },
       {
         "id": "contato",
-        "top": 8969,
+        "top": 8760,
         "width": 1280,
         "height": 794
       }
@@ -1401,7 +1401,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -1635,23 +1635,23 @@
         "id": "processo",
         "top": 5437,
         "width": 768,
-        "height": 1469
+        "height": 1333
       },
       {
         "id": "projetos",
-        "top": 6906,
+        "top": 6770,
         "width": 768,
         "height": 1755
       },
       {
         "id": "sobre",
-        "top": 9975,
+        "top": 9839,
         "width": 768,
         "height": 1126
       },
       {
         "id": "contato",
-        "top": 13496,
+        "top": 13404,
         "width": 768,
         "height": 1208
       }
@@ -1676,7 +1676,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -1912,23 +1912,23 @@
         "id": "processo",
         "top": 6353,
         "width": 390,
-        "height": 1679
+        "height": 1543
       },
       {
         "id": "projetos",
-        "top": 8032,
+        "top": 7896,
         "width": 390,
         "height": 2257
       },
       {
         "id": "sobre",
-        "top": 11721,
+        "top": 11585,
         "width": 390,
         "height": 1200
       },
       {
         "id": "contato",
-        "top": 15622,
+        "top": 15530,
         "width": 390,
         "height": 1252
       }
@@ -1953,7 +1953,7 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 71,
+      "iconCount": 77,
       "benefitsCardCount": 6,
       "segmentChipCount": 6,
       "scale": {
@@ -2187,23 +2187,23 @@
         "id": "processo",
         "top": 6547,
         "width": 360,
-        "height": 1705
+        "height": 1561
       },
       {
         "id": "projetos",
-        "top": 8252,
+        "top": 8108,
         "width": 360,
         "height": 2257
       },
       {
         "id": "sobre",
-        "top": 12024,
+        "top": 11879,
         "width": 360,
         "height": 1189
       },
       {
         "id": "contato",
-        "top": 15974,
+        "top": 15866,
         "width": 360,
         "height": 1304
       }

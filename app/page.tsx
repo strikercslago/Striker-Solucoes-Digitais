@@ -21,11 +21,13 @@ const iconPaths: Record<string, ReactNode> = {
   medical: <><path d="M12 5v14" /><path d="M5 12h14" /><circle cx="12" cy="12" r="8" /></>,
   messageMore: <><path d="M5 5h14v11H9l-4 4V5Z" /><path d="M9 11h.01" /><path d="M12 11h.01" /><path d="M15 11h.01" /></>,
   menu: <><path d="M5 7h14" /><path d="M5 12h14" /><path d="M5 17h14" /></>,
+  minus: <path d="M5 12h14" />,
   mind: <><path d="M9 18H7a4 4 0 0 1-1-7.9A5.5 5.5 0 0 1 16.5 8c2.4.4 4.2 2.5 4.2 5 0 2.8-2.2 5-5 5H15" /><path d="M9 18c0-3 6-3 6 0" /></>,
   palette: <><path d="M12 4a8 8 0 0 0 0 16h1.5a2 2 0 0 0 1.7-3l-.2-.3a1.7 1.7 0 0 1 1.5-2.6H18a4 4 0 0 0 3.7-4.9A10 10 0 0 0 12 4Z" /><path d="M7.5 11h.01" /><path d="M10 7.5h.01" /><path d="M14 7.5h.01" /></>,
   pen: <><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="m13 7 4 4" /></>,
   pin: <><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></>,
   play: <><circle cx="12" cy="12" r="9" /><path d="m10 8 6 4-6 4V8Z" /></>,
+  plus: <><path d="M12 5v14" /><path d="M5 12h14" /></>,
   panelHome: <><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M4 9h16" /><path d="m8 15 4-3 4 3" /><path d="M10 18v-4h4v4" /></>,
   post: <><rect x="5" y="4" width="14" height="16" rx="2" /><path d="M8 9h8" /><path d="M8 13h8" /><path d="M8 17h5" /></>,
   scale: <><path d="M12 4v16" /><path d="M5 7h14" /><path d="M7 7l-3 6h6L7 7Z" /><path d="M17 7l-3 6h6l-3-6Z" /></>,
@@ -636,16 +638,20 @@ export default function Home() {
               return (
                 <div className="faq-item" key={item.question}>
                   <button
+                    className="faq-trigger"
                     type="button"
                     aria-expanded={isOpen}
                     aria-controls={`faq-panel-${index}`}
                     id={`faq-button-${index}`}
                     onClick={() => setOpenFaq(isOpen ? -1 : index)}
                   >
-                    <span>{index + 1}. {item.question}</span>
-                    {isOpen ? <span aria-hidden="true">−</span> : <span aria-hidden="true">+</span>}
+                    <span className="faq-question">{index + 1}. {item.question}</span>
+                    <span className="faq-icon" aria-hidden="true">
+                      <IconGlyph name={isOpen ? "minus" : "plus"} />
+                    </span>
                   </button>
                   <div
+                    className="faq-answer"
                     id={`faq-panel-${index}`}
                     role="region"
                     aria-labelledby={`faq-button-${index}`}

@@ -135,3 +135,28 @@ Espaços verticais reduzidos no desktop baixo: `padding-top` do hero de 16px par
 - `npm test`: aprovado com Node 24 do runtime do Codex.
 - `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720, 768 x 1024, 390 x 844 e 360 x 800.
 - Checagem Playwright com movimento reduzido: `prefers-reduced-motion=true`, 39 elementos verificados, 0 ocultos por animação.
+
+## Rodada restrita: Processo e FAQ
+
+- Capturas antes: `process-faq/before-process-1536x730.png`, `process-faq/before-process-viewport-1536x730.png`, `process-faq/before-faq-first-open-1536x730.png`, `process-faq/before-faq-third-open-1536x730.png`, `process-faq/before-faq-first-open-390x844.png`.
+- Capturas depois: `process-faq/after-process-1536x730.png`, `process-faq/after-process-viewport-1536x730.png`, `process-faq/after-faq-first-open-1536x730.png`, `process-faq/after-faq-third-open-1536x730.png`, `process-faq/after-faq-first-open-390x844.png`.
+- Viewports CSS medidos: 1536 x 730, 1440 x 800, 1366 x 768, 390 x 844 e 360 x 800; todos com `devicePixelRatio=1` e sem overflow horizontal.
+- A seção "Como trabalhamos" ficou restrita às sete etapas existentes, com números brancos em todos os círculos, timeline em 4 + 3 no desktop e vertical no mobile.
+- O FAQ passou a usar `button.faq-trigger`, `span.faq-question`, `span.faq-icon` e `div.faq-answer`, preservando `aria-expanded`, `aria-controls`, `role="region"` e navegação por teclado nativa.
+
+Valores antes e depois em 1536 x 730 CSS:
+
+| Item | Antes | Depois |
+| --- | ---: | ---: |
+| Altura total de "Como trabalhamos" | 916.77px | 584.33px |
+| Padding superior da seção | 78px | 38px |
+| Padding inferior computado via footer | 62px | 24px |
+| Título da seção | 50px, line-height 56px, altura 168px | 42px, line-height 45.36px, altura 90.72px |
+| Timeline | 337.28px, gap 48px x 34px | 287.69px, gap 16px x 24px |
+| Círculos | 58px x 58px, número 22px | 58px x 58px, número 18px |
+| Cor dos números | 01 branco; 02-07 azul | 01-07 branco |
+| Prazo + CTA | footer 110px, margin-top 50px | footer 76px, margin-top 16px |
+| FAQ trigger desktop | 64px, padding 0 | 76px, padding 0 20px 0 24px |
+| FAQ trigger mobile | 64px, padding 26px | 72px, padding 0 16px 0 18px |
+
+Diferença restante: em 1536 x 730 a seção seguinte começa no DOM logo após 584.33px, mas o `IntersectionObserver` global de `reveal` ainda mantém "Projetos" transparente até uma fração adicional de rolagem. Não alterei a seção "Projetos" nem o comportamento global de reveal nesta rodada porque a solicitação restringia as mudanças a "Como trabalhamos" e FAQ.
