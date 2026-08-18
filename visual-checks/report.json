@@ -13,45 +13,56 @@
       "scrollWidth": 1440,
       "bodyWidth": 1440,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "faqOpen": true,
-      "formReady": true
+      "formReady": true,
+      "formOpensWhatsapp": true,
+      "formPopupUrl": "https://api.whatsapp.com/send/?phone=5554999102656&text=Ol%C3%A1%2C+STRIKER.+Quero+solicitar+uma+an%C3%A1lise+gratuita.%0A%0ANome%3A+Teste+STRIKER%0AEmpresa%3A+Empresa+de+teste%0AWhatsApp%3A+%2854%29+99910-2656%0AE-mail%3A+teste%40example.com%0AServi%C3%A7o+de+interesse%3A+Desenvolvimento+de+site%0ASobre+o+projeto%3A+Gostaria+de+uma+an%C3%A1lise+gratuita.&type=phone_number&app_absent=0",
+      "anchor_solucoes": true,
+      "anchor_processo": true,
+      "anchor_projetos": true,
+      "anchor_sobre": true,
+      "anchor_contato": true
     },
     "sections": [
       {
         "id": "inicio",
         "top": 24,
         "width": 1280,
-        "height": 72
+        "height": 74
       },
       {
         "id": "solucoes",
-        "top": 2782,
+        "top": 2260,
         "width": 1440,
-        "height": 857
+        "height": 769
       },
       {
         "id": "processo",
-        "top": 5033,
+        "top": 4079,
         "width": 1440,
-        "height": 901
+        "height": 860
       },
       {
         "id": "projetos",
-        "top": 5934,
+        "top": 4939,
         "width": 1440,
-        "height": 1191
+        "height": 1107
       },
       {
         "id": "sobre",
-        "top": 8203,
+        "top": 6839,
         "width": 1440,
-        "height": 875
+        "height": 659
       },
       {
         "id": "contato",
-        "top": 11601,
+        "top": 9523,
         "width": 1440,
-        "height": 860
+        "height": 788
       }
     ]
   },
@@ -69,6 +80,10 @@
       "scrollWidth": 390,
       "bodyWidth": 390,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "menuVisible": true,
       "menuClosed": true,
       "faqOpen": true
@@ -77,38 +92,38 @@
       {
         "id": "inicio",
         "top": 26,
-        "width": 346,
-        "height": 86
+        "width": 350,
+        "height": 82
       },
       {
         "id": "solucoes",
-        "top": 3801,
+        "top": 3405,
         "width": 390,
-        "height": 1426
+        "height": 1565
       },
       {
         "id": "processo",
-        "top": 7291,
+        "top": 7218,
         "width": 390,
-        "height": 1491
+        "height": 1689
       },
       {
         "id": "projetos",
-        "top": 8782,
+        "top": 8908,
         "width": 390,
-        "height": 2535
+        "height": 2257
       },
       {
         "id": "sobre",
-        "top": 13092,
+        "top": 12606,
         "width": 390,
-        "height": 1339
+        "height": 1200
       },
       {
         "id": "contato",
-        "top": 17391,
+        "top": 16536,
         "width": 390,
-        "height": 1282
+        "height": 1262
       }
     ]
   },
@@ -125,44 +140,48 @@
       "scrollWidth": 1280,
       "bodyWidth": 1280,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "faqOpen": true
     },
     "sections": [
       {
         "id": "inicio",
         "top": 24,
-        "width": 1232,
-        "height": 72
+        "width": 1184,
+        "height": 74
       },
       {
         "id": "solucoes",
-        "top": 2690,
+        "top": 2248,
         "width": 1280,
-        "height": 857
+        "height": 769
       },
       {
         "id": "processo",
-        "top": 4827,
+        "top": 4029,
         "width": 1280,
-        "height": 815
+        "height": 848
       },
       {
         "id": "projetos",
-        "top": 5642,
+        "top": 4877,
         "width": 1280,
-        "height": 1191
+        "height": 1107
       },
       {
         "id": "sobre",
-        "top": 7751,
+        "top": 6703,
         "width": 1280,
-        "height": 852
+        "height": 598
       },
       {
         "id": "contato",
-        "top": 11077,
+        "top": 9264,
         "width": 1280,
-        "height": 860
+        "height": 788
       }
     ]
   },
@@ -179,6 +198,10 @@
       "scrollWidth": 1024,
       "bodyWidth": 1024,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "faqOpen": true
     },
     "sections": [
@@ -186,37 +209,37 @@
         "id": "inicio",
         "top": 24,
         "width": 976,
-        "height": 72
+        "height": 74
       },
       {
         "id": "solucoes",
-        "top": 2659,
+        "top": 2182,
         "width": 1024,
-        "height": 1123
+        "height": 979
       },
       {
         "id": "processo",
-        "top": 4941,
+        "top": 4198,
         "width": 1024,
-        "height": 788
+        "height": 849
       },
       {
         "id": "projetos",
-        "top": 5729,
+        "top": 5047,
         "width": 1024,
-        "height": 1240
+        "height": 1158
       },
       {
         "id": "sobre",
-        "top": 8063,
+        "top": 7048,
         "width": 1024,
-        "height": 892
+        "height": 652
       },
       {
         "id": "contato",
-        "top": 11294,
+        "top": 9602,
         "width": 1024,
-        "height": 880
+        "height": 814
       }
     ]
   },
@@ -233,44 +256,48 @@
       "scrollWidth": 768,
       "bodyWidth": 768,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "faqOpen": true
     },
     "sections": [
       {
         "id": "inicio",
         "top": 26,
-        "width": 716,
-        "height": 86
+        "width": 724,
+        "height": 82
       },
       {
         "id": "solucoes",
-        "top": 3694,
+        "top": 3022,
         "width": 768,
-        "height": 1229
+        "height": 1463
       },
       {
         "id": "processo",
-        "top": 6727,
+        "top": 6353,
         "width": 768,
-        "height": 1496
+        "height": 1479
       },
       {
         "id": "projetos",
-        "top": 8223,
+        "top": 7832,
         "width": 768,
-        "height": 2132
+        "height": 1755
       },
       {
         "id": "sobre",
-        "top": 11961,
+        "top": 10911,
         "width": 768,
-        "height": 1324
+        "height": 1126
       },
       {
         "id": "contato",
-        "top": 16117,
+        "top": 14460,
         "width": 768,
-        "height": 1283
+        "height": 1218
       }
     ]
   },
@@ -287,44 +314,48 @@
       "scrollWidth": 360,
       "bodyWidth": 360,
       "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "consoleErrors": [],
       "faqOpen": true
     },
     "sections": [
       {
         "id": "inicio",
         "top": 26,
-        "width": 316,
-        "height": 86
+        "width": 320,
+        "height": 82
       },
       {
         "id": "solucoes",
-        "top": 4057,
+        "top": 3583,
         "width": 360,
-        "height": 1462
+        "height": 1619
       },
       {
         "id": "processo",
-        "top": 7658,
+        "top": 7597,
         "width": 360,
-        "height": 1517
+        "height": 1715
       },
       {
         "id": "projetos",
-        "top": 9175,
+        "top": 9312,
         "width": 360,
-        "height": 2535
+        "height": 2257
       },
       {
         "id": "sobre",
-        "top": 13535,
+        "top": 13093,
         "width": 360,
-        "height": 1375
+        "height": 1189
       },
       {
         "id": "contato",
-        "top": 17899,
+        "top": 17072,
         "width": 360,
-        "height": 1302
+        "height": 1314
       }
     ]
   }

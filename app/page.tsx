@@ -1,26 +1,58 @@
 "use client";
 
-import { FormEvent, KeyboardEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, KeyboardEvent, ReactNode, useEffect, useMemo, useState } from "react";
 
-function IconGlyph({
-  name,
-  className = "",
-}: {
-  name: string;
-  className?: string;
-}) {
+const iconPaths: Record<string, ReactNode> = {
+  alert: <><path d="M12 3 3.7 6.5v5.8c0 5.1 3.5 8 8.3 9.7 4.8-1.7 8.3-4.6 8.3-9.7V6.5L12 3Z" /><path d="M12 8v5" /><path d="M12 17h.01" /></>,
+  arrow: <><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></>,
+  calendar: <><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M8 3v4" /><path d="M16 3v4" /><path d="M4 10h16" /></>,
+  case: <><rect x="4" y="7" width="16" height="12" rx="2" /><path d="M9 7V5h6v2" /><path d="M4 12h16" /></>,
+  chart: <><path d="M4 18 9 13l4 3 7-9" /><path d="M15 7h5v5" /></>,
+  chat: <><path d="M5 5h14v10H9l-4 4V5Z" /><path d="M8 9h8" /><path d="M8 12h5" /></>,
+  check: <><circle cx="12" cy="12" r="9" /><path d="m8 12 3 3 5-6" /></>,
+  close: <><path d="M6 6l12 12" /><path d="M18 6 6 18" /></>,
+  devices: <><rect x="3" y="5" width="13" height="10" rx="1.5" /><rect x="17" y="9" width="4" height="8" rx="1" /><path d="M8 19h6" /><path d="M11 15v4" /></>,
+  help: <><circle cx="12" cy="12" r="9" /><path d="M9.6 9a2.7 2.7 0 1 1 4.6 2c-1.2.9-2.2 1.4-2.2 3" /><path d="M12 18h.01" /></>,
+  home: <><path d="M4 11 12 4l8 7" /><path d="M6 10v10h12V10" /><path d="M10 20v-6h4v6" /></>,
+  laptop: <><rect x="5" y="5" width="14" height="10" rx="1.5" /><path d="M3 19h18" /></>,
+  lock: <><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>,
+  mail: <><rect x="4" y="6" width="16" height="12" rx="2" /><path d="m4 8 8 6 8-6" /></>,
+  medical: <><path d="M12 5v14" /><path d="M5 12h14" /><circle cx="12" cy="12" r="8" /></>,
+  menu: <><path d="M5 7h14" /><path d="M5 12h14" /><path d="M5 17h14" /></>,
+  mind: <><path d="M9 18H7a4 4 0 0 1-1-7.9A5.5 5.5 0 0 1 16.5 8c2.4.4 4.2 2.5 4.2 5 0 2.8-2.2 5-5 5H15" /><path d="M9 18c0-3 6-3 6 0" /></>,
+  palette: <><path d="M12 4a8 8 0 0 0 0 16h1.5a2 2 0 0 0 1.7-3l-.2-.3a1.7 1.7 0 0 1 1.5-2.6H18a4 4 0 0 0 3.7-4.9A10 10 0 0 0 12 4Z" /><path d="M7.5 11h.01" /><path d="M10 7.5h.01" /><path d="M14 7.5h.01" /></>,
+  pen: <><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="m13 7 4 4" /></>,
+  pin: <><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></>,
+  play: <><circle cx="12" cy="12" r="9" /><path d="m10 8 6 4-6 4V8Z" /></>,
+  post: <><rect x="5" y="4" width="14" height="16" rx="2" /><path d="M8 9h8" /><path d="M8 13h8" /><path d="M8 17h5" /></>,
+  scale: <><path d="M12 4v16" /><path d="M5 7h14" /><path d="M7 7l-3 6h6L7 7Z" /><path d="M17 7l-3 6h6l-3-6Z" /></>,
+  send: <><path d="m21 3-8.5 18-3-8-7.5-3L21 3Z" /><path d="m9.5 12.5 4-4" /></>,
+  shield: <><path d="M12 3 4.5 6.2v5.5c0 4.8 3.2 7.9 7.5 9.3 4.3-1.4 7.5-4.5 7.5-9.3V6.2L12 3Z" /><path d="m8.8 12 2.2 2.2 4.5-5" /></>,
+  spark: <><path d="M12 3v5" /><path d="M12 16v5" /><path d="M3 12h5" /><path d="M16 12h5" /><path d="m6 6 3 3" /><path d="m15 15 3 3" /><path d="m18 6-3 3" /><path d="m9 15-3 3" /></>,
+  target: <><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path d="M12 3v3" /><path d="M21 12h-3" /></>,
+  tool: <><path d="m14.7 6.3 3 3" /><path d="M5 19 16.5 7.5a3 3 0 0 0-4-4L11 5l3 3" /><path d="M4 20l1-4 3 3-4 1Z" /></>,
+  tooth: <><path d="M8 4c1.5 0 2.5 1 4 1s2.5-1 4-1c2.2 0 4 1.8 4 4 0 4.6-2.8 12-5 12-1.2 0-1-4-3-4s-1.8 4-3 4c-2.2 0-5-7.4-5-12 0-2.2 1.8-4 4-4Z" /></>,
+  user: <><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
+};
+
+function IconGlyph({ name, className = "" }: { name: string; className?: string }) {
   return (
-    <span className={`glyph glyph-${name} ${className}`} aria-hidden="true">
-      {name}
-    </span>
+    <svg className={`icon icon-${name} ${className}`} aria-hidden="true" viewBox="0 0 24 24">
+      {iconPaths[name] ?? iconPaths.spark}
+    </svg>
   );
 }
 
-const whatsappNumber = "5554999102656";
-const whatsappMessage = encodeURIComponent(
+const whatsappLocalNumber = "54999102656";
+const whatsappNumber = `55${whatsappLocalNumber}`;
+
+function buildWhatsappUrl(message: string) {
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+const whatsappUrl = buildWhatsappUrl(
   "Olá, STRIKER. Quero solicitar uma análise gratuita para melhorar a presença digital da minha empresa.",
 );
-const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 const navItems = [
   ["Soluções", "#solucoes"],
@@ -89,9 +121,11 @@ const solutionCards = [
 
 const benefits = [
   ["Mais autoridade", "Uma apresentação profissional aumenta a confiança em sua empresa.", "shield"],
-  ["Mensagem mais clara", "O visitante entende seus serviços e diferenciais com facilidade.", "chat"],
-  ["Mais oportunidades", "Cada seção orienta o usuário em direção ao contato.", "chart"],
-  ["Presença própria", "Um espaço digital que pertence à sua empresa e trabalha todos os dias.", "home"],
+  ["Comunicação mais clara", "O visitante entende seus serviços e diferenciais com facilidade.", "chat"],
+  ["Melhor percepção de valor", "Sua empresa apresenta uma estrutura compatível com a qualidade do seu trabalho.", "target"],
+  ["Mais oportunidades de contato", "Cada seção orienta o usuário em direção ao próximo passo.", "send"],
+  ["Presença digital própria", "Um espaço digital que pertence à sua empresa e trabalha todos os dias.", "home"],
+  ["Estrutura preparada para crescer", "Uma base profissional para evoluir conteúdo, páginas e comunicação.", "chart"],
 ];
 
 const segments = [
@@ -105,9 +139,12 @@ const segments = [
 
 const processSteps = [
   ["01", "Diagnóstico", "Entendemos sua empresa, seus serviços, seu público e seus objetivos."],
-  ["02", "Estratégia", "Organizamos a mensagem, a estrutura das páginas e o caminho até o contato."],
-  ["03", "Design e desenvolvimento", "Transformamos a estratégia em uma experiência profissional, responsiva e funcional."],
-  ["04", "Entrega e acompanhamento", "Publicamos, orientamos sua equipe e permanecemos presentes após a entrega."],
+  ["02", "Planejamento", "Definimos estratégia, escopo e prioridades do projeto."],
+  ["03", "Direção visual", "Criamos a identidade visual e a experiência do site."],
+  ["04", "Desenvolvimento", "Transformamos o design em um site funcional."],
+  ["05", "Revisão", "Ajustamos cada detalhe com base no seu feedback."],
+  ["06", "Publicação", "Colocamos seu site no ar com segurança e performance."],
+  ["07", "Acompanhamento", "Monitoramos, atualizamos e apoiamos sua evolução."],
 ];
 
 const socialItems = [
@@ -226,7 +263,12 @@ function SocialMockup() {
           ))}
         </div>
       </div>
-      <div className="metric-card"><b>Desempenho</b><strong>12,8K</strong><small>+18%</small><i /></div>
+      <div className="content-card">
+        <b>Criação de conteúdo</b>
+        <span><IconGlyph name="post" /> Post institucional</span>
+        <span><IconGlyph name="palette" /> Identidade visual</span>
+        <span><IconGlyph name="calendar" /> Próximas publicações</span>
+      </div>
       <div className="post-phone">
         <div className="post-top"><span /><i /><i /><i /><i /></div>
         <div className="post-image"><div /></div>
@@ -289,22 +331,23 @@ export default function Home() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
+    const message = [
+      "Olá, STRIKER. Quero solicitar uma análise gratuita.",
+      "",
+      `Nome: ${String(data.get("nome"))}`,
+      `Empresa: ${String(data.get("empresa"))}`,
+      `WhatsApp: ${String(data.get("whatsapp"))}`,
+      `E-mail: ${String(data.get("email"))}`,
+      `Serviço de interesse: ${String(data.get("servico"))}`,
+      `Sobre o projeto: ${String(data.get("mensagem"))}`,
+    ].join("\n");
+
     setStatus("loading");
-    try {
-      const body = new URLSearchParams();
-      data.forEach((value, key) => body.append(key, String(value)));
-      body.append("form-name", "contato-striker");
-
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      });
-
-      if (!response.ok) throw new Error("Falha no envio");
+    const opened = window.open(buildWhatsappUrl(message), "_blank", "noopener,noreferrer");
+    if (opened) {
       setStatus("success");
       form.reset();
-    } catch {
+    } else {
       setStatus("error");
     }
   }
@@ -611,26 +654,21 @@ export default function Home() {
             <h2>Conte-nos um pouco sobre sua empresa.</h2>
             <p>Preencha o formulário ao lado e nossa equipe entrará em contato para entender suas necessidades e sugerir os próximos passos.</p>
             <div className="contact-methods">
-              <a href={whatsappUrl} target="_blank" rel="noreferrer"><IconGlyph name="chat" /> <span><strong>WhatsApp</strong>Fale com nossa equipe</span></a>
-              <a href="mailto:rafael.gomeslago1@gmail.com"><IconGlyph name="mail" /> <span><strong>E-mail</strong>Responda quando for melhor para você</span></a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer"><IconGlyph name="chat" /> <span><strong>WhatsApp</strong>(54) 99910-2656</span></a>
+              <a href="mailto:rafael.gomeslago1@gmail.com"><IconGlyph name="mail" /> <span><strong>E-mail</strong>rafael.gomeslago1@gmail.com</span></a>
             </div>
           </div>
           <form
             className="contact-form"
             name="contato-striker"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={submitForm}
             noValidate
           >
-            <input type="hidden" name="form-name" value="contato-striker" />
-            <p className="hidden-field"><label>Não preencha: <input name="bot-field" /></label></p>
             <label>Nome<input name="nome" placeholder="Seu nome" aria-invalid={Boolean(errors.nome)} /></label>
             {errors.nome && <small>{errors.nome}</small>}
             <label>Empresa<input name="empresa" placeholder="Nome da empresa" aria-invalid={Boolean(errors.empresa)} /></label>
             {errors.empresa && <small>{errors.empresa}</small>}
-            <label>WhatsApp<input name="whatsapp" placeholder="(11) 99999-9999" aria-invalid={Boolean(errors.whatsapp)} /></label>
+            <label>WhatsApp<input name="whatsapp" placeholder="(00) 00000-0000" aria-invalid={Boolean(errors.whatsapp)} /></label>
             {errors.whatsapp && <small>{errors.whatsapp}</small>}
             <label>E-mail<input name="email" type="email" placeholder="seu@email.com" aria-invalid={Boolean(errors.email)} /></label>
             {errors.email && <small>{errors.email}</small>}
@@ -655,8 +693,8 @@ export default function Home() {
             <button className="button primary wide" type="submit" disabled={status === "loading"}>
               {status === "loading" ? "Enviando..." : "Enviar solicitação"}
             </button>
-            {status === "success" && <p className="form-message success"><IconGlyph name="check" /> Solicitação enviada. A STRIKER entrará em contato em breve.</p>}
-            {status === "error" && <p className="form-message error">Não foi possível enviar agora. Use o WhatsApp direto ou tente novamente.</p>}
+            {status === "success" && <p className="form-message success"><IconGlyph name="check" /> Abrimos o WhatsApp com sua solicitação preenchida. Revise e envie a mensagem para concluir o contato.</p>}
+            {status === "error" && <p className="form-message error">Não foi possível abrir o WhatsApp automaticamente. Use o botão direto ou tente novamente.</p>}
             <p className="privacy wide">Seus dados serão utilizados apenas para responder ao seu contato.</p>
           </form>
         </div>
@@ -676,13 +714,12 @@ export default function Home() {
           </nav>
           <div>
             <h3>Contato</h3>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer"><IconGlyph name="chat" /> WhatsApp</a>
-            <a href="mailto:rafael.gomeslago1@gmail.com"><IconGlyph name="mail" /> E-mail</a>
+            <a href={whatsappUrl} target="_blank" rel="noreferrer"><IconGlyph name="chat" /> WhatsApp: (54) 99910-2656</a>
+            <a href="mailto:rafael.gomeslago1@gmail.com"><IconGlyph name="mail" /> rafael.gomeslago1@gmail.com</a>
           </div>
           <div>
             <h3>Atendimento</h3>
             <p><IconGlyph name="pin" /> Todo o Brasil</p>
-            <p>Projetos selecionados no exterior</p>
           </div>
         </div>
         <div className="container footer-bottom">

@@ -26,6 +26,13 @@ for (const viewport of viewports) {
     viewport: { width: viewport.width, height: viewport.height },
     deviceScaleFactor: 1,
   });
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  page.on("pageerror", (error) => {
+    consoleErrors.push(error.message);
+  });
 
   await page.goto("http://localhost:3000/", { waitUntil: "domcontentloaded", timeout: 60_000 });
   await page.evaluate(() => document.fonts?.ready);
@@ -38,7 +45,11 @@ for (const viewport of viewports) {
     scrollWidth: document.documentElement.scrollWidth,
     bodyWidth: document.body.scrollWidth,
     whatsappLinks: document.querySelectorAll('a[href^="https://wa.me/5554999102656"]').length,
+    localWhatsappMentioned: document.body.textContent.includes("(54) 99910-2656"),
+    headerPosition: getComputedStyle(document.querySelector(".site-header")).position,
+    iconCount: document.querySelectorAll("svg.icon").length,
   }));
+  metrics.consoleErrors = consoleErrors;
 
   const sections = await page.evaluate(() =>
     ["inicio", "solucoes", "processo", "projetos", "sobre", "contato"].map((id) => {
@@ -84,6 +95,19 @@ for (const viewport of viewports) {
     await page.locator("textarea[name=mensagem]").fill("Gostaria de uma análise gratuita.");
     await page.locator("input[name=consentimento]").check();
     metrics.formReady = await page.locator("button[type=submit]").isEnabled();
+    const popupPromise = page.waitForEvent("popup", { timeout: 5_000 }).catch(() => null);
+    await page.locator("button[type=submit]").click();
+    const popup = await popupPromise;
+    metrics.formOpensWhatsapp = Boolean(popup);
+    metrics.formPopupUrl = popup?.url() ?? null;
+    await popup?.close().catch(() => {});
+    for (const href of ["#solucoes", "#processo", "#projetos", "#sobre", "#contato"]) {
+      const before = await page.evaluate(() => window.scrollY);
+      await page.locator(`.desktop-nav a[href="${href}"]`).click();
+      await page.waitForTimeout(250);
+      const after = await page.evaluate(() => window.scrollY);
+      metrics[`anchor_${href.slice(1)}`] = after !== before || href === "#solucoes";
+    }
   }
 
   results.push({ viewport, metrics, sections });

@@ -1,12 +1,13 @@
 # Comparação visual STRIKER
 
-Data: 2026-08-14  
+Data: 2026-08-18  
 Ambiente: produção local `http://localhost:3000/`  
 Capturas geradas:
 
 - `desktop-1440-full.png`
 - `mobile-390-full.png`
 - `report.json`
+- Capturas auxiliares de inspeção mobile: `mobile-390-finalcta-viewport.png`, `mobile-390-contact-viewport.png`, `mobile-390-footer-viewport.png`
 
 ## Viewports verificados
 
@@ -21,18 +22,28 @@ Capturas geradas:
 
 - Menu mobile abre, fecha por Escape e preserva navegação por âncoras.
 - FAQ abre por botão com `aria-expanded`.
-- Formulário aceita preenchimento válido e mantém botão habilitado.
-- Links de WhatsApp apontam para `https://wa.me/5554999102656`.
+- Formulário valida campos obrigatórios, não simula sucesso falso e abre WhatsApp com mensagem preenchida.
+- Links de WhatsApp usam o número real `54999102656` em formato internacional para abertura externa.
+- Âncoras desktop verificadas: `#solucoes`, `#processo`, `#projetos`, `#sobre` e `#contato`.
+- Console verificado sem erros nos viewports testados.
 
 ## Comparação por seção
 
-- Hero: composição com navegação, slogan, H1, CTAs e mockups responsivos preservada. Diferença P2: mockups são implementados em CSS/HTML e não reproduzem exatamente a perspectiva/fotografia das referências.
-- Diagnóstico e transição: hierarquia, cards de problemas e bloco escuro preservados. Diferença P2: ícones leves em CSS diferem dos traços originais.
-- Soluções, benefícios e público: estrutura desktop em grid e mobile em fluxo vertical preservada. Diferença P2: densidade dos cards varia levemente entre 1024px e 768px.
-- Processo e projetos: timeline desktop clara e timeline mobile escura preservadas; placeholders honestos mantidos. Diferença P2: desktop usa 4 etapas principais conforme especificação textual, enquanto a referência desktop visual mostra 7 microetapas.
-- Redes, fundador e depoimento: mockup social, retrato real de Rafael e placeholder de vídeo preservados. Diferença P2: mockup social é simplificado em CSS, sem reproduzir todos os cartões flutuantes da referência desktop.
-- FAQ, CTA, formulário e rodapé: acordeão, condições, CTA escuro, formulário e rodapé preservados. Diferença P2: copy do FAQ segue a especificação textual mais recente em vez de algumas variações visuais da referência desktop.
+- Header: estático, com uma única instância e sem comportamento fixed/sticky.
+- Hero: composição com navegação, slogan, H1, CTAs e mockups responsivos preservada. Diferença P2: mockups são construídos em HTML/CSS e não reproduzem a perspectiva fotográfica exata das referências.
+- Diagnóstico e transição: cards com ícones lineares legíveis, transição escura compacta e mobile empilhado sem cortes laterais.
+- Soluções, benefícios e público: grid desktop preservado, seis benefícios obrigatórios implementados e chips mobile em largura integral, incluindo "Prestadores de serviço".
+- Processo e projetos: timeline desktop com 7 etapas e linhas sem cruzar texto; mobile em lista vertical legível; placeholders honestos mantidos.
+- Redes sociais: removidos números e métricas fictícias; mockup usa elementos neutros de calendário, conteúdo, publicações e planejamento.
+- Fundador e depoimento: foto real de Rafael sem distorção, bloco do fundador em fluxo mobile correto e depoimento mantido como placeholder honesto.
+- FAQ, CTA, formulário e rodapé: acordeão funcional, CTA compacta, formulário com validação/WhatsApp e rodapé com WhatsApp/e-mail reais.
 
 ## Resultado
 
-Nenhuma diferença P0 ou P1 foi encontrada após a rodada final. Permanecem apenas diferenças P2/P3 ligadas a nuances de mockup, ícones e microespaçamentos, sem quebrar conteúdo, responsividade ou funcionalidade.
+Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem apenas diferenças P2/P3 ligadas a nuances de mockup, ícones e microespaçamentos, sem quebrar conteúdo, responsividade ou funcionalidade.
+
+## Verificações técnicas
+
+- `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
+- `npm test`: aprovado com Node 24 do runtime do Codex.
+- `node scripts\visual-check.mjs`: aprovado em 1440, 1280, 1024, 768, 390 e 360px.

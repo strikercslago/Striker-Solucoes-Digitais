@@ -35,7 +35,8 @@ test("server-renders the STRIKER landing page", async () => {
   assert.match(html, /Projeto em preparação/i);
   assert.match(html, /Depoimento em vídeo — em breve/i);
   assert.match(html, /https:\/\/wa\.me\/5554999102656/i);
-  assert.match(html, /contato-striker/i);
+  assert.match(html, /Conte-nos um pouco sobre sua empresa\./i);
+  assert.match(html, /\(00\) 00000-0000/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
