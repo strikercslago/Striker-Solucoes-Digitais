@@ -1,14 +1,132 @@
 [
   {
     "viewport": {
-      "name": "desktop-1440",
-      "width": 1440,
-      "height": 1100,
+      "name": "notebook-1536x730",
+      "width": 1536,
+      "height": 730,
       "screenshot": true
     },
     "metrics": {
       "title": "STRIKER Soluções Digitais | Sites que posicionam",
       "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 1536,
+      "innerHeight": 730,
+      "devicePixelRatio": 1,
+      "clientWidth": 1536,
+      "scrollWidth": 1536,
+      "bodyWidth": 1536,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 12,
+          "bottom": 70,
+          "width": 1280,
+          "height": 58,
+          "visible": true
+        },
+        "slogan": {
+          "top": 86,
+          "bottom": 106,
+          "width": 1536,
+          "height": 20,
+          "visible": true
+        },
+        "h1": {
+          "top": 113,
+          "bottom": 226,
+          "width": 920,
+          "height": 114,
+          "visible": true
+        },
+        "lead": {
+          "top": 236,
+          "bottom": 278,
+          "width": 590,
+          "height": 41,
+          "visible": true
+        },
+        "actions": {
+          "top": 292,
+          "bottom": 332,
+          "width": 1536,
+          "height": 40,
+          "visible": true
+        },
+        "mockup": {
+          "top": 332,
+          "bottom": 565,
+          "width": 640,
+          "height": 234,
+          "visible": true
+        },
+        "strip": {
+          "top": 565,
+          "bottom": 633,
+          "width": 1280,
+          "height": 68,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 12,
+        "width": 1280,
+        "height": 58
+      },
+      {
+        "id": "solucoes",
+        "top": 1834,
+        "width": 1536,
+        "height": 837
+      },
+      {
+        "id": "processo",
+        "top": 3739,
+        "width": 1536,
+        "height": 917
+      },
+      {
+        "id": "projetos",
+        "top": 4655,
+        "width": 1536,
+        "height": 1107
+      },
+      {
+        "id": "sobre",
+        "top": 6567,
+        "width": 1536,
+        "height": 681
+      },
+      {
+        "id": "contato",
+        "top": 9277,
+        "width": 1536,
+        "height": 796
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "desktop-1440x800",
+      "width": 1440,
+      "height": 800,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 1440,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
       "clientWidth": 1440,
       "scrollWidth": 1440,
       "bodyWidth": 1440,
@@ -16,6 +134,59 @@
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
       "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 12,
+          "bottom": 70,
+          "width": 1280,
+          "height": 58,
+          "visible": true
+        },
+        "slogan": {
+          "top": 86,
+          "bottom": 106,
+          "width": 1440,
+          "height": 20,
+          "visible": true
+        },
+        "h1": {
+          "top": 113,
+          "bottom": 225,
+          "width": 920,
+          "height": 113,
+          "visible": true
+        },
+        "lead": {
+          "top": 235,
+          "bottom": 277,
+          "width": 590,
+          "height": 41,
+          "visible": true
+        },
+        "actions": {
+          "top": 291,
+          "bottom": 331,
+          "width": 1440,
+          "height": 40,
+          "visible": true
+        },
+        "mockup": {
+          "top": 331,
+          "bottom": 587,
+          "width": 640,
+          "height": 256,
+          "visible": true
+        },
+        "strip": {
+          "top": 587,
+          "bottom": 654,
+          "width": 1280,
+          "height": 67,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
       "consoleErrors": [],
       "faqOpen": true,
       "formReady": true,
@@ -30,52 +201,285 @@
     "sections": [
       {
         "id": "inicio",
-        "top": 24,
+        "top": 12,
         "width": 1280,
-        "height": 74
+        "height": 58
       },
       {
         "id": "solucoes",
-        "top": 2260,
+        "top": 1851,
         "width": 1440,
-        "height": 769
+        "height": 837
       },
       {
         "id": "processo",
-        "top": 4079,
+        "top": 3756,
         "width": 1440,
-        "height": 860
+        "height": 858
       },
       {
         "id": "projetos",
-        "top": 4939,
+        "top": 4614,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6839,
+        "top": 6526,
         "width": 1440,
-        "height": 659
+        "height": 679
       },
       {
         "id": "contato",
-        "top": 9523,
+        "top": 9228,
         "width": 1440,
-        "height": 788
+        "height": 796
       }
     ]
   },
   {
     "viewport": {
-      "name": "mobile-390",
-      "width": 390,
-      "height": 1200,
+      "name": "notebook-1366x768",
+      "width": 1366,
+      "height": 768,
       "screenshot": true
     },
     "metrics": {
       "title": "STRIKER Soluções Digitais | Sites que posicionam",
       "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 1366,
+      "innerHeight": 768,
+      "devicePixelRatio": 1,
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyWidth": 1366,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 12,
+          "bottom": 70,
+          "width": 1270,
+          "height": 58,
+          "visible": true
+        },
+        "slogan": {
+          "top": 86,
+          "bottom": 106,
+          "width": 1366,
+          "height": 20,
+          "visible": true
+        },
+        "h1": {
+          "top": 113,
+          "bottom": 220,
+          "width": 920,
+          "height": 107,
+          "visible": true
+        },
+        "lead": {
+          "top": 230,
+          "bottom": 271,
+          "width": 590,
+          "height": 41,
+          "visible": true
+        },
+        "actions": {
+          "top": 285,
+          "bottom": 325,
+          "width": 1366,
+          "height": 40,
+          "visible": true
+        },
+        "mockup": {
+          "top": 325,
+          "bottom": 571,
+          "width": 640,
+          "height": 246,
+          "visible": true
+        },
+        "strip": {
+          "top": 571,
+          "bottom": 636,
+          "width": 1270,
+          "height": 65,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 12,
+        "width": 1270,
+        "height": 58
+      },
+      {
+        "id": "solucoes",
+        "top": 1825,
+        "width": 1366,
+        "height": 837
+      },
+      {
+        "id": "processo",
+        "top": 3715,
+        "width": 1366,
+        "height": 853
+      },
+      {
+        "id": "projetos",
+        "top": 4568,
+        "width": 1366,
+        "height": 1107
+      },
+      {
+        "id": "sobre",
+        "top": 6416,
+        "width": 1366,
+        "height": 623
+      },
+      {
+        "id": "contato",
+        "top": 9047,
+        "width": 1366,
+        "height": 796
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "compact-1280x720",
+      "width": 1280,
+      "height": 720,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "devicePixelRatio": 1,
+      "clientWidth": 1280,
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 12,
+          "bottom": 70,
+          "width": 1190,
+          "height": 58,
+          "visible": true
+        },
+        "slogan": {
+          "top": 86,
+          "bottom": 106,
+          "width": 1280,
+          "height": 20,
+          "visible": true
+        },
+        "h1": {
+          "top": 113,
+          "bottom": 213,
+          "width": 920,
+          "height": 100,
+          "visible": true
+        },
+        "lead": {
+          "top": 223,
+          "bottom": 264,
+          "width": 590,
+          "height": 41,
+          "visible": true
+        },
+        "actions": {
+          "top": 278,
+          "bottom": 318,
+          "width": 1280,
+          "height": 40,
+          "visible": true
+        },
+        "mockup": {
+          "top": 318,
+          "bottom": 549,
+          "width": 640,
+          "height": 230,
+          "visible": true
+        },
+        "strip": {
+          "top": 549,
+          "bottom": 612,
+          "width": 1190,
+          "height": 63,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 12,
+        "width": 1190,
+        "height": 58
+      },
+      {
+        "id": "solucoes",
+        "top": 1791,
+        "width": 1280,
+        "height": 837
+      },
+      {
+        "id": "processo",
+        "top": 3659,
+        "width": 1280,
+        "height": 846
+      },
+      {
+        "id": "projetos",
+        "top": 4505,
+        "width": 1280,
+        "height": 1107
+      },
+      {
+        "id": "sobre",
+        "top": 6343,
+        "width": 1280,
+        "height": 625
+      },
+      {
+        "id": "contato",
+        "top": 8929,
+        "width": 1280,
+        "height": 796
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "mobile-390x844",
+      "width": 390,
+      "height": 844,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "devicePixelRatio": 1,
       "clientWidth": 390,
       "scrollWidth": 390,
       "bodyWidth": 390,
@@ -83,6 +487,59 @@
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
       "iconCount": 72,
+      "hero": {
+        "header": {
+          "top": 14,
+          "bottom": 84,
+          "width": 350,
+          "height": 70,
+          "visible": true
+        },
+        "slogan": {
+          "top": 132,
+          "bottom": 186,
+          "width": 340,
+          "height": 54,
+          "visible": true
+        },
+        "h1": {
+          "top": 198,
+          "bottom": 330,
+          "width": 358,
+          "height": 131,
+          "visible": true
+        },
+        "lead": {
+          "top": 344,
+          "bottom": 454,
+          "width": 354,
+          "height": 111,
+          "visible": true
+        },
+        "actions": {
+          "top": 474,
+          "bottom": 596,
+          "width": 350,
+          "height": 122,
+          "visible": true
+        },
+        "mockup": {
+          "top": 618,
+          "bottom": 863,
+          "width": 372,
+          "height": 245,
+          "visible": true
+        },
+        "strip": {
+          "top": 886,
+          "bottom": 992,
+          "width": 350,
+          "height": 106,
+          "visible": false
+        },
+        "stripStartsInFirstView": false,
+        "mockupAndCtasShareFirstView": true
+      },
       "consoleErrors": [],
       "menuVisible": true,
       "menuClosed": true,
@@ -91,271 +548,39 @@
     "sections": [
       {
         "id": "inicio",
-        "top": 26,
+        "top": 14,
         "width": 350,
-        "height": 82
+        "height": 70
       },
       {
         "id": "solucoes",
-        "top": 3405,
+        "top": 3046,
         "width": 390,
-        "height": 1565
+        "height": 1555
       },
       {
         "id": "processo",
-        "top": 7218,
+        "top": 6849,
         "width": 390,
-        "height": 1689
+        "height": 1679
       },
       {
         "id": "projetos",
-        "top": 8908,
+        "top": 8528,
         "width": 390,
         "height": 2257
       },
       {
         "id": "sobre",
-        "top": 12606,
+        "top": 12217,
         "width": 390,
         "height": 1200
       },
       {
         "id": "contato",
-        "top": 16536,
+        "top": 16117,
         "width": 390,
-        "height": 1262
-      }
-    ]
-  },
-  {
-    "viewport": {
-      "name": "desktop-1280",
-      "width": 1280,
-      "height": 900
-    },
-    "metrics": {
-      "title": "STRIKER Soluções Digitais | Sites que posicionam",
-      "h1": "Uma presença digital à altura do seu negócio.",
-      "clientWidth": 1280,
-      "scrollWidth": 1280,
-      "bodyWidth": 1280,
-      "whatsappLinks": 4,
-      "localWhatsappMentioned": true,
-      "headerPosition": "relative",
-      "iconCount": 72,
-      "consoleErrors": [],
-      "faqOpen": true
-    },
-    "sections": [
-      {
-        "id": "inicio",
-        "top": 24,
-        "width": 1184,
-        "height": 74
-      },
-      {
-        "id": "solucoes",
-        "top": 2248,
-        "width": 1280,
-        "height": 769
-      },
-      {
-        "id": "processo",
-        "top": 4029,
-        "width": 1280,
-        "height": 848
-      },
-      {
-        "id": "projetos",
-        "top": 4877,
-        "width": 1280,
-        "height": 1107
-      },
-      {
-        "id": "sobre",
-        "top": 6703,
-        "width": 1280,
-        "height": 598
-      },
-      {
-        "id": "contato",
-        "top": 9264,
-        "width": 1280,
-        "height": 788
-      }
-    ]
-  },
-  {
-    "viewport": {
-      "name": "tablet-1024",
-      "width": 1024,
-      "height": 900
-    },
-    "metrics": {
-      "title": "STRIKER Soluções Digitais | Sites que posicionam",
-      "h1": "Uma presença digital à altura do seu negócio.",
-      "clientWidth": 1024,
-      "scrollWidth": 1024,
-      "bodyWidth": 1024,
-      "whatsappLinks": 4,
-      "localWhatsappMentioned": true,
-      "headerPosition": "relative",
-      "iconCount": 72,
-      "consoleErrors": [],
-      "faqOpen": true
-    },
-    "sections": [
-      {
-        "id": "inicio",
-        "top": 24,
-        "width": 976,
-        "height": 74
-      },
-      {
-        "id": "solucoes",
-        "top": 2182,
-        "width": 1024,
-        "height": 979
-      },
-      {
-        "id": "processo",
-        "top": 4198,
-        "width": 1024,
-        "height": 849
-      },
-      {
-        "id": "projetos",
-        "top": 5047,
-        "width": 1024,
-        "height": 1158
-      },
-      {
-        "id": "sobre",
-        "top": 7048,
-        "width": 1024,
-        "height": 652
-      },
-      {
-        "id": "contato",
-        "top": 9602,
-        "width": 1024,
-        "height": 814
-      }
-    ]
-  },
-  {
-    "viewport": {
-      "name": "tablet-768",
-      "width": 768,
-      "height": 1000
-    },
-    "metrics": {
-      "title": "STRIKER Soluções Digitais | Sites que posicionam",
-      "h1": "Uma presença digital à altura do seu negócio.",
-      "clientWidth": 768,
-      "scrollWidth": 768,
-      "bodyWidth": 768,
-      "whatsappLinks": 4,
-      "localWhatsappMentioned": true,
-      "headerPosition": "relative",
-      "iconCount": 72,
-      "consoleErrors": [],
-      "faqOpen": true
-    },
-    "sections": [
-      {
-        "id": "inicio",
-        "top": 26,
-        "width": 724,
-        "height": 82
-      },
-      {
-        "id": "solucoes",
-        "top": 3022,
-        "width": 768,
-        "height": 1463
-      },
-      {
-        "id": "processo",
-        "top": 6353,
-        "width": 768,
-        "height": 1479
-      },
-      {
-        "id": "projetos",
-        "top": 7832,
-        "width": 768,
-        "height": 1755
-      },
-      {
-        "id": "sobre",
-        "top": 10911,
-        "width": 768,
-        "height": 1126
-      },
-      {
-        "id": "contato",
-        "top": 14460,
-        "width": 768,
-        "height": 1218
-      }
-    ]
-  },
-  {
-    "viewport": {
-      "name": "mobile-360",
-      "width": 360,
-      "height": 1000
-    },
-    "metrics": {
-      "title": "STRIKER Soluções Digitais | Sites que posicionam",
-      "h1": "Uma presença digital à altura do seu negócio.",
-      "clientWidth": 360,
-      "scrollWidth": 360,
-      "bodyWidth": 360,
-      "whatsappLinks": 4,
-      "localWhatsappMentioned": true,
-      "headerPosition": "relative",
-      "iconCount": 72,
-      "consoleErrors": [],
-      "faqOpen": true
-    },
-    "sections": [
-      {
-        "id": "inicio",
-        "top": 26,
-        "width": 320,
-        "height": 82
-      },
-      {
-        "id": "solucoes",
-        "top": 3583,
-        "width": 360,
-        "height": 1619
-      },
-      {
-        "id": "processo",
-        "top": 7597,
-        "width": 360,
-        "height": 1715
-      },
-      {
-        "id": "projetos",
-        "top": 9312,
-        "width": 360,
-        "height": 2257
-      },
-      {
-        "id": "sobre",
-        "top": 13093,
-        "width": 360,
-        "height": 1189
-      },
-      {
-        "id": "contato",
-        "top": 17072,
-        "width": 360,
-        "height": 1314
+        "height": 1252
       }
     ]
   }

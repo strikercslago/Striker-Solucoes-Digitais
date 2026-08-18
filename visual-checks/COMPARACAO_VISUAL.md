@@ -4,19 +4,21 @@ Data: 2026-08-18
 Ambiente: produção local `http://localhost:3000/`  
 Capturas geradas:
 
-- `desktop-1440-full.png`
-- `mobile-390-full.png`
 - `report.json`
+- `scale/hero-1536x730.png`
+- `scale/hero-1440x800.png`
+- `scale/hero-1366x768.png`
+- `scale/hero-1280x720.png`
+- `scale/hero-390x844.png`
 - Capturas auxiliares de inspeção mobile: `mobile-390-finalcta-viewport.png`, `mobile-390-contact-viewport.png`, `mobile-390-footer-viewport.png`
 
 ## Viewports verificados
 
-- 1440px: screenshot full-page, sem overflow horizontal.
-- 390px: screenshot full-page, sem overflow horizontal.
-- 1280px: sem overflow horizontal.
-- 1024px: sem overflow horizontal.
-- 768px: sem overflow horizontal.
-- 360px: sem overflow horizontal.
+- 1536 x 730 CSS: `innerWidth=1536`, `innerHeight=730`, `devicePixelRatio=1`, sem overflow horizontal.
+- 1440 x 800 CSS: `innerWidth=1440`, `innerHeight=800`, `devicePixelRatio=1`, sem overflow horizontal.
+- 1366 x 768 CSS: `innerWidth=1366`, `innerHeight=768`, `devicePixelRatio=1`, sem overflow horizontal.
+- 1280 x 720 CSS: `innerWidth=1280`, `innerHeight=720`, `devicePixelRatio=1`, sem overflow horizontal.
+- 390 x 844 CSS: `innerWidth=390`, `innerHeight=844`, `devicePixelRatio=1`, sem overflow horizontal.
 
 ## Interações verificadas
 
@@ -30,7 +32,7 @@ Capturas geradas:
 ## Comparação por seção
 
 - Header: estático, com uma única instância e sem comportamento fixed/sticky.
-- Hero: composição com navegação, slogan, H1, CTAs e mockups responsivos preservada. Diferença P2: mockups são construídos em HTML/CSS e não reproduzem a perspectiva fotográfica exata das referências.
+- Hero: composição reescalada para notebook Full HD em zoom 100%. Em 1536 x 730, 1440 x 800, 1366 x 768 e 1280 x 720, cabeçalho, slogan, H1, parágrafo, CTAs, mockup principal e início da faixa de benefícios aparecem na mesma primeira tela. No mobile 390 x 844, mensagem, CTAs e mockup principal aparecem como uma composição única; a faixa começa logo abaixo.
 - Diagnóstico e transição: cards com ícones lineares legíveis, transição escura compacta e mobile empilhado sem cortes laterais.
 - Soluções, benefícios e público: grid desktop preservado, seis benefícios obrigatórios implementados e chips mobile em largura integral, incluindo "Prestadores de serviço".
 - Processo e projetos: timeline desktop com 7 etapas e linhas sem cruzar texto; mobile em lista vertical legível; placeholders honestos mantidos.
@@ -42,8 +44,16 @@ Capturas geradas:
 
 Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem apenas diferenças P2/P3 ligadas a nuances de mockup, ícones e microespaçamentos, sem quebrar conteúdo, responsividade ou funcionalidade.
 
+## Correção de escala
+
+- Header reduzido e mantido como elemento estático no fluxo da página.
+- Hero removido de uma altura mínima fixa grande e recalculado com `clamp()` para título, espaçamentos, botões e mockup.
+- Adicionada media query por altura para viewports desktop com menos de 850px úteis.
+- Seções internas receberam compactação de padding e gaps em desktop para evitar alongamento artificial.
+- O mockup deixou de se comportar visualmente como uma segunda tela separada do texto principal.
+
 ## Verificações técnicas
 
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
 - `npm test`: aprovado com Node 24 do runtime do Codex.
-- `node scripts\visual-check.mjs`: aprovado em 1440, 1280, 1024, 768, 390 e 360px.
+- `node scripts\visual-check.mjs`: aprovado em 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720 e 390 x 844.

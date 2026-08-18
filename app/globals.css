@@ -3591,3 +3591,352 @@ blockquote {
   }
 }
 
+/* Viewport-height scale correction */
+@media (min-width: 861px) {
+  .site-header {
+    width: min(1280px, calc(100% - clamp(48px, 7vw, 96px)));
+    min-height: clamp(58px, 8vh, 68px);
+    margin-top: clamp(12px, 2.1vh, 18px);
+    grid-template-columns: 228px 1fr auto;
+    padding-inline: clamp(20px, 2vw, 26px);
+  }
+
+  .brand img {
+    width: clamp(178px, 14vw, 198px);
+    height: 50px;
+  }
+
+  .desktop-nav {
+    gap: clamp(28px, 3.2vw, 44px);
+    font-size: clamp(14px, 1vw, 16px);
+  }
+
+  .header-cta {
+    min-height: 44px;
+    padding-inline: 20px;
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding-top: clamp(20px, 3.4vh, 34px);
+  }
+
+  .slogan {
+    margin-bottom: clamp(8px, 1.6vh, 14px);
+    font-size: clamp(17px, 1.35vw, 19px);
+    line-height: 1.22;
+  }
+
+  h1 {
+    max-width: min(980px, calc(100% - 96px));
+    margin-bottom: clamp(12px, 2vh, 18px);
+    font-size: clamp(50px, 4.35vw, 64px);
+    line-height: 0.99;
+  }
+
+  .lead {
+    max-width: 620px;
+    margin-bottom: clamp(16px, 2.4vh, 22px);
+    font-size: clamp(15px, 1.1vw, 17px);
+    line-height: 1.45;
+  }
+
+  .button {
+    min-height: clamp(42px, 5.8vh, 48px);
+    padding-inline: clamp(22px, 2.2vw, 28px);
+    font-size: clamp(14px, 1.05vw, 16px);
+  }
+
+  .hero-actions {
+    gap: clamp(16px, 2vw, 24px);
+    margin-bottom: clamp(0px, 1vh, 8px);
+  }
+
+  .device-stage {
+    width: min(700px, calc(100% - 72px));
+    height: clamp(260px, 34vh, 320px);
+  }
+
+  .laptop {
+    left: 7%;
+    width: clamp(460px, 39vw, 530px);
+    height: clamp(252px, 30vh, 292px);
+  }
+
+  .phone {
+    right: 6%;
+    width: clamp(132px, 11vw, 154px);
+    height: clamp(244px, 29vh, 286px);
+  }
+
+  .hero::after {
+    inset: auto 0 clamp(132px, 20vh, 175px);
+    height: clamp(130px, 20vh, 190px);
+  }
+
+  .hero-feature-strip {
+    width: min(1280px, calc(100% - clamp(48px, 7vw, 96px)));
+    min-height: 0;
+    gap: clamp(12px, 1.5vw, 18px);
+    padding: clamp(18px, 2.4vh, 26px) clamp(34px, 5vw, 58px);
+  }
+
+  .hero-feature-strip span {
+    gap: 14px;
+    font-size: clamp(14px, 1.1vw, 16px);
+  }
+
+  .hero-feature-strip .icon {
+    width: clamp(28px, 2.3vw, 34px);
+    height: clamp(28px, 2.3vw, 34px);
+  }
+
+  .diagnosis,
+  .solutions,
+  .benefits,
+  .audience,
+  .social,
+  .founder,
+  .testimonial,
+  .contact {
+    padding-top: clamp(58px, 8vw, 82px);
+    padding-bottom: clamp(58px, 7vw, 78px);
+  }
+
+  .process {
+    padding-top: clamp(58px, 7vw, 78px);
+  }
+
+  .faq {
+    padding-top: clamp(64px, 7vw, 84px);
+    padding-bottom: clamp(48px, 5vw, 60px);
+  }
+
+  .split,
+  .diagnosis-grid,
+  .audience-grid,
+  .social-grid,
+  .founder-grid,
+  .faq-grid,
+  .contact-grid {
+    gap: clamp(48px, 5.5vw, 82px);
+  }
+
+  .solution-card,
+  .problem-card {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 861px) and (max-height: 850px) {
+  .site-header {
+    min-height: 58px;
+    margin-top: 12px;
+  }
+
+  .brand img {
+    width: 178px;
+    height: 46px;
+  }
+
+  .header-cta {
+    min-height: 40px;
+  }
+
+  .hero {
+    padding-top: 16px;
+  }
+
+  .slogan {
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  h1 {
+    max-width: min(920px, calc(100% - 120px));
+    margin-bottom: 10px;
+    font-size: clamp(46px, 4vw, 58px);
+    line-height: 0.98;
+  }
+
+  .lead {
+    max-width: 590px;
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.38;
+  }
+
+  .button {
+    min-height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    margin-bottom: 0;
+  }
+
+  .device-stage {
+    width: min(640px, calc(100% - 96px));
+    height: clamp(230px, 32vh, 270px);
+  }
+
+  .laptop {
+    width: clamp(420px, 36vw, 480px);
+    height: clamp(224px, 28vh, 252px);
+    border-width: 8px;
+    border-bottom-width: 18px;
+  }
+
+  .laptop::after {
+    bottom: -28px;
+    height: 12px;
+  }
+
+  .phone {
+    width: clamp(116px, 9.5vw, 136px);
+    height: clamp(216px, 27vh, 250px);
+    border-width: 7px;
+  }
+
+  .mini-layout > div:first-child {
+    padding: 38px 0 0 36px;
+  }
+
+  .mini-layout h3 {
+    width: 180px;
+    font-size: 24px;
+  }
+
+  .hero-feature-strip {
+    padding-block: 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  .site-header {
+    min-height: 70px;
+    margin-top: 14px;
+    padding-inline: 16px;
+  }
+
+  .brand img {
+    width: clamp(160px, 48vw, 190px);
+    height: 48px;
+  }
+
+  .menu-button {
+    width: 54px;
+    height: 54px;
+  }
+
+  .hero {
+    padding-top: clamp(34px, 6vh, 48px);
+  }
+
+  .slogan {
+    max-width: 340px;
+    margin-bottom: 12px;
+    font-size: clamp(20px, 5.8vw, 24px);
+    line-height: 1.2;
+  }
+
+  h1 {
+    max-width: calc(100% - 32px);
+    margin-bottom: 14px;
+    font-size: clamp(40px, 11vw, 46px);
+    line-height: 1.02;
+  }
+
+  .lead {
+    max-width: calc(100% - 36px);
+    margin-bottom: 20px;
+    font-size: clamp(18px, 5vw, 21px);
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    width: calc(100% - 40px);
+    gap: 10px;
+    margin: 0 auto 22px;
+  }
+
+  .button {
+    min-height: 56px;
+    font-size: 18px;
+  }
+
+  .device-stage {
+    width: min(100% - 18px, 390px);
+    height: clamp(226px, 29vh, 252px);
+    margin-bottom: clamp(18px, 2.7vh, 28px);
+  }
+
+  .laptop {
+    left: 2%;
+    width: 84%;
+    height: 88%;
+    border-width: 7px;
+    border-bottom-width: 16px;
+  }
+
+  .phone {
+    right: 2%;
+    width: 27%;
+    min-width: 92px;
+    height: 84%;
+    border-width: 6px;
+    bottom: 6px;
+  }
+
+  .mini-nav {
+    height: 34px;
+  }
+
+  .mini-layout {
+    height: calc(100% - 34px);
+  }
+
+  .mini-layout > div:first-child {
+    padding: 32px 0 0 34px;
+  }
+
+  .mini-layout h3 {
+    width: 150px;
+    font-size: 21px;
+  }
+
+  .mini-layout p {
+    width: 132px;
+    font-size: 8px;
+  }
+
+  .phone-screen {
+    padding-top: 20px;
+  }
+
+  .phone-photo {
+    height: 62px;
+  }
+
+  .hero-feature-strip {
+    width: calc(100% - 40px);
+    grid-template-columns: 58px minmax(0, 1fr);
+    padding: 24px 26px;
+    border-radius: 22px 22px 0 0;
+  }
+
+  .hero-feature-strip span {
+    font-size: clamp(22px, 6vw, 25px);
+  }
+
+  .hero-feature-strip .icon {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border: 2px solid var(--blue);
+    border-radius: 16px;
+  }
+}
+

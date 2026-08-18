@@ -8,14 +8,14 @@ const { chromium } = require(
 
 const outputDir = "visual-checks";
 fs.mkdirSync(outputDir, { recursive: true });
+fs.mkdirSync(`${outputDir}/scale`, { recursive: true });
 
 const viewports = [
-  { name: "desktop-1440", width: 1440, height: 1100, screenshot: true },
-  { name: "mobile-390", width: 390, height: 1200, screenshot: true },
-  { name: "desktop-1280", width: 1280, height: 900 },
-  { name: "tablet-1024", width: 1024, height: 900 },
-  { name: "tablet-768", width: 768, height: 1000 },
-  { name: "mobile-360", width: 360, height: 1000 },
+  { name: "notebook-1536x730", width: 1536, height: 730, screenshot: true },
+  { name: "desktop-1440x800", width: 1440, height: 800, screenshot: true },
+  { name: "notebook-1366x768", width: 1366, height: 768, screenshot: true },
+  { name: "compact-1280x720", width: 1280, height: 720, screenshot: true },
+  { name: "mobile-390x844", width: 390, height: 844, screenshot: true },
 ];
 
 const browser = await chromium.launch();
@@ -41,6 +41,9 @@ for (const viewport of viewports) {
   const metrics = await page.evaluate(() => ({
     title: document.title,
     h1: document.querySelector("h1")?.textContent,
+    innerWidth: window.innerWidth,
+    innerHeight: window.innerHeight,
+    devicePixelRatio: window.devicePixelRatio,
     clientWidth: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
     bodyWidth: document.body.scrollWidth,
@@ -48,7 +51,33 @@ for (const viewport of viewports) {
     localWhatsappMentioned: document.body.textContent.includes("(54) 99910-2656"),
     headerPosition: getComputedStyle(document.querySelector(".site-header")).position,
     iconCount: document.querySelectorAll("svg.icon").length,
+    hero: ["header", "slogan", "h1", "lead", "actions", "mockup", "strip"].reduce((acc, key) => {
+      const selector = {
+        header: ".site-header",
+        slogan: ".slogan",
+        h1: "h1",
+        lead: ".lead",
+        actions: ".hero-actions",
+        mockup: ".device-stage",
+        strip: ".hero-feature-strip",
+      }[key];
+      const element = document.querySelector(selector);
+      const rect = element?.getBoundingClientRect();
+      acc[key] = rect
+        ? {
+            top: Math.round(rect.top),
+            bottom: Math.round(rect.bottom),
+            width: Math.round(rect.width),
+            height: Math.round(rect.height),
+            visible: rect.top < window.innerHeight && rect.bottom > 0,
+          }
+        : null;
+      return acc;
+    }, {}),
   }));
+  metrics.hero.stripStartsInFirstView = metrics.hero.strip?.top < metrics.innerHeight;
+  metrics.hero.mockupAndCtasShareFirstView =
+    Boolean(metrics.hero.actions?.visible) && Boolean(metrics.hero.mockup?.visible);
   metrics.consoleErrors = consoleErrors;
 
   const sections = await page.evaluate(() =>
@@ -67,12 +96,12 @@ for (const viewport of viewports) {
 
   if (viewport.screenshot) {
     await page.screenshot({
-      path: `${outputDir}/${viewport.name}-full.png`,
-      fullPage: true,
+      path: `${outputDir}/scale/hero-${viewport.width}x${viewport.height}.png`,
+      fullPage: false,
     });
   }
 
-  if (viewport.name === "mobile-390") {
+  if (viewport.name === "mobile-390x844") {
     await page.getByRole("button", { name: /abrir menu/i }).click();
     metrics.menuVisible = await page
       .locator("#mobile-menu")
@@ -86,7 +115,7 @@ for (const viewport of viewports) {
   await page.getByRole("button", { name: /2\. Domínio/i }).click().catch(() => {});
   metrics.faqOpen = await page.locator("#faq-panel-1").isVisible().catch(() => false);
 
-  if (viewport.name === "desktop-1440") {
+  if (viewport.name === "desktop-1440x800") {
     await page.locator("input[name=nome]").fill("Teste STRIKER");
     await page.locator("input[name=empresa]").fill("Empresa de teste");
     await page.locator("input[name=whatsapp]").fill("(54) 99910-2656");
