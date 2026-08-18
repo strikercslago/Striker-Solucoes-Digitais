@@ -188,45 +188,45 @@
           "visible": true
         },
         "slogan": {
-          "top": 117,
-          "bottom": 140,
+          "top": 106,
+          "bottom": 129,
           "width": 1900,
           "height": 23,
           "visible": true
         },
         "h1": {
-          "top": 154,
-          "bottom": 281,
+          "top": 139,
+          "bottom": 266,
           "width": 980,
           "height": 127,
           "visible": true
         },
         "lead": {
-          "top": 299,
-          "bottom": 348,
+          "top": 280,
+          "bottom": 329,
           "width": 620,
           "height": 49,
           "visible": true
         },
         "actions": {
-          "top": 370,
-          "bottom": 418,
+          "top": 345,
+          "bottom": 393,
           "width": 1900,
           "height": 48,
           "visible": true
         },
         "mockup": {
-          "top": 426,
-          "bottom": 828,
-          "width": 700,
-          "height": 402,
+          "top": 397,
+          "bottom": 754,
+          "width": 665,
+          "height": 356,
           "visible": true
         },
         "strip": {
-          "top": 828,
-          "bottom": 932,
+          "top": 817,
+          "bottom": 904,
           "width": 1280,
-          "height": 104,
+          "height": 87,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -244,31 +244,31 @@
       },
       {
         "id": "solucoes",
-        "top": 2163,
+        "top": 2145,
         "width": 1900,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 4186,
+        "top": 4168,
         "width": 1900,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 5103,
+        "top": 5085,
         "width": 1900,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 7022,
+        "top": 7004,
         "width": 1900,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9751,
+        "top": 9733,
         "width": 1900,
         "height": 804
       }
@@ -463,45 +463,45 @@
           "visible": true
         },
         "slogan": {
-          "top": 86,
-          "bottom": 106,
+          "top": 82,
+          "bottom": 101,
           "width": 1536,
           "height": 20,
           "visible": true
         },
         "h1": {
-          "top": 113,
-          "bottom": 226,
-          "width": 920,
-          "height": 114,
+          "top": 106,
+          "bottom": 208,
+          "width": 880,
+          "height": 102,
           "visible": true
         },
         "lead": {
-          "top": 236,
-          "bottom": 278,
-          "width": 590,
-          "height": 41,
+          "top": 216,
+          "bottom": 254,
+          "width": 570,
+          "height": 38,
           "visible": true
         },
         "actions": {
-          "top": 292,
-          "bottom": 332,
+          "top": 264,
+          "bottom": 302,
           "width": 1536,
-          "height": 40,
+          "height": 38,
           "visible": true
         },
         "mockup": {
-          "top": 332,
-          "bottom": 675,
-          "width": 640,
-          "height": 343,
+          "top": 306,
+          "bottom": 612,
+          "width": 610,
+          "height": 307,
           "visible": true
         },
         "strip": {
-          "top": 675,
-          "bottom": 767,
+          "top": 649,
+          "bottom": 720,
           "width": 1280,
-          "height": 92,
+          "height": 71,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -519,33 +519,33 @@
       },
       {
         "id": "solucoes",
-        "top": 1989,
+        "top": 1951,
         "width": 1536,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3857,
+        "top": 3818,
         "width": 1536,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4774,
+        "top": 4735,
         "width": 1536,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6685,
+        "top": 6644,
         "width": 1536,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9398,
+        "top": 9353,
         "width": 1536,
-        "height": 796
+        "height": 794
       }
     ]
   },
@@ -738,45 +738,45 @@
           "visible": true
         },
         "slogan": {
-          "top": 86,
-          "bottom": 106,
+          "top": 83,
+          "bottom": 102,
           "width": 1440,
           "height": 20,
           "visible": true
         },
         "h1": {
-          "top": 113,
-          "bottom": 225,
-          "width": 920,
-          "height": 113,
+          "top": 107,
+          "bottom": 208,
+          "width": 880,
+          "height": 100,
           "visible": true
         },
         "lead": {
-          "top": 235,
-          "bottom": 277,
-          "width": 590,
-          "height": 41,
+          "top": 216,
+          "bottom": 253,
+          "width": 570,
+          "height": 38,
           "visible": true
         },
         "actions": {
-          "top": 291,
-          "bottom": 331,
+          "top": 263,
+          "bottom": 301,
           "width": 1440,
-          "height": 40,
+          "height": 38,
           "visible": true
         },
         "mockup": {
-          "top": 331,
-          "bottom": 707,
-          "width": 640,
-          "height": 376,
+          "top": 305,
+          "bottom": 641,
+          "width": 610,
+          "height": 336,
           "visible": true
         },
         "strip": {
-          "top": 707,
-          "bottom": 798,
+          "top": 713,
+          "bottom": 784,
           "width": 1280,
-          "height": 91,
+          "height": 71,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -802,33 +802,33 @@
       },
       {
         "id": "solucoes",
-        "top": 2017,
+        "top": 2011,
         "width": 1440,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3867,
+        "top": 3861,
         "width": 1440,
         "height": 858
       },
       {
         "id": "projetos",
-        "top": 4725,
+        "top": 4719,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6637,
+        "top": 6629,
         "width": 1440,
         "height": 679
       },
       {
         "id": "contato",
-        "top": 9341,
+        "top": 9329,
         "width": 1440,
-        "height": 796
+        "height": 794
       }
     ]
   },
@@ -1021,45 +1021,45 @@
           "visible": true
         },
         "slogan": {
-          "top": 86,
-          "bottom": 106,
+          "top": 82,
+          "bottom": 101,
           "width": 1366,
-          "height": 20,
+          "height": 19,
           "visible": true
         },
         "h1": {
-          "top": 113,
-          "bottom": 220,
-          "width": 920,
-          "height": 107,
+          "top": 106,
+          "bottom": 201,
+          "width": 880,
+          "height": 95,
           "visible": true
         },
         "lead": {
-          "top": 230,
-          "bottom": 271,
-          "width": 590,
-          "height": 41,
+          "top": 209,
+          "bottom": 247,
+          "width": 570,
+          "height": 38,
           "visible": true
         },
         "actions": {
-          "top": 285,
-          "bottom": 325,
+          "top": 257,
+          "bottom": 295,
           "width": 1366,
-          "height": 40,
+          "height": 38,
           "visible": true
         },
         "mockup": {
-          "top": 325,
-          "bottom": 686,
-          "width": 640,
-          "height": 361,
+          "top": 299,
+          "bottom": 622,
+          "width": 610,
+          "height": 323,
           "visible": true
         },
         "strip": {
-          "top": 686,
-          "bottom": 775,
+          "top": 685,
+          "bottom": 755,
           "width": 1270,
-          "height": 89,
+          "height": 70,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -1077,33 +1077,33 @@
       },
       {
         "id": "solucoes",
-        "top": 1986,
+        "top": 1974,
         "width": 1366,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3823,
+        "top": 3811,
         "width": 1366,
         "height": 853
       },
       {
         "id": "projetos",
-        "top": 4676,
+        "top": 4663,
         "width": 1366,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6524,
+        "top": 6509,
         "width": 1366,
         "height": 623
       },
       {
         "id": "contato",
-        "top": 9157,
+        "top": 9139,
         "width": 1366,
-        "height": 796
+        "height": 794
       }
     ]
   },
@@ -1296,45 +1296,45 @@
           "visible": true
         },
         "slogan": {
-          "top": 86,
-          "bottom": 106,
+          "top": 82,
+          "bottom": 100,
           "width": 1280,
-          "height": 20,
+          "height": 18,
           "visible": true
         },
         "h1": {
-          "top": 113,
-          "bottom": 213,
-          "width": 920,
-          "height": 100,
+          "top": 105,
+          "bottom": 194,
+          "width": 880,
+          "height": 89,
           "visible": true
         },
         "lead": {
-          "top": 223,
-          "bottom": 264,
-          "width": 590,
-          "height": 41,
+          "top": 202,
+          "bottom": 239,
+          "width": 570,
+          "height": 38,
           "visible": true
         },
         "actions": {
-          "top": 278,
-          "bottom": 318,
+          "top": 249,
+          "bottom": 287,
           "width": 1280,
-          "height": 40,
+          "height": 38,
           "visible": true
         },
         "mockup": {
-          "top": 318,
-          "bottom": 657,
-          "width": 640,
-          "height": 338,
+          "top": 291,
+          "bottom": 594,
+          "width": 610,
+          "height": 302,
           "visible": true
         },
         "strip": {
-          "top": 657,
-          "bottom": 744,
+          "top": 642,
+          "bottom": 710,
           "width": 1190,
-          "height": 87,
+          "height": 68,
           "visible": true
         },
         "stripStartsInFirstView": true,
@@ -1352,33 +1352,33 @@
       },
       {
         "id": "solucoes",
-        "top": 1945,
+        "top": 1919,
         "width": 1280,
         "height": 837
       },
       {
         "id": "processo",
-        "top": 3729,
+        "top": 3703,
         "width": 1280,
         "height": 846
       },
       {
         "id": "projetos",
-        "top": 4575,
+        "top": 4549,
         "width": 1280,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6413,
+        "top": 6385,
         "width": 1280,
         "height": 625
       },
       {
         "id": "contato",
-        "top": 9001,
+        "top": 8969,
         "width": 1280,
-        "height": 796
+        "height": 794
       }
     ]
   },

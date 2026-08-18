@@ -5357,3 +5357,137 @@ textarea:focus-visible {
   }
 }
 
+/* First-fold desktop fit: keep the full hero composition above the viewport edge. */
+@media (min-width: 861px) and (max-height: 940px) {
+  .hero {
+    padding-top: clamp(18px, 2.2vh, 22px);
+  }
+
+  .slogan {
+    margin-bottom: clamp(8px, 1.2vh, 10px);
+  }
+
+  h1 {
+    margin-bottom: clamp(12px, 1.6vh, 14px);
+  }
+
+  .lead {
+    margin-bottom: clamp(14px, 1.8vh, 16px);
+  }
+
+  .hero-actions {
+    margin-bottom: 4px;
+  }
+
+  .device-stage {
+    width: min(665px, calc(100% - 72px));
+    height: clamp(330px, 39vh, 360px);
+  }
+
+  .laptop {
+    width: clamp(540px, 33vw, 610px);
+    height: clamp(300px, 35vh, 330px);
+  }
+
+  .phone {
+    width: clamp(138px, 9.2vw, 164px);
+    height: clamp(278px, 31vh, 306px);
+  }
+
+  .hero::after {
+    inset: auto 0 clamp(116px, 16vh, 150px);
+    height: clamp(118px, 17vh, 160px);
+  }
+
+  .hero-feature-strip {
+    margin: auto auto 10px;
+    padding-block: clamp(14px, 1.9vh, 18px);
+  }
+
+  .hero-feature-strip span {
+    font-size: clamp(14px, 1vw, 15px);
+  }
+
+  .hero-feature-strip .icon {
+    width: clamp(26px, 2vw, 30px);
+    height: clamp(26px, 2vw, 30px);
+    padding: 9px;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 861px) and (max-height: 820px) {
+  .hero {
+    padding-top: clamp(10px, 1.6vh, 14px);
+  }
+
+  .slogan {
+    margin-bottom: 5px;
+    font-size: clamp(15px, 1.15vw, 16px);
+  }
+
+  h1 {
+    max-width: min(880px, calc(100% - 120px));
+    margin-bottom: 8px;
+    font-size: clamp(43px, 3.55vw, 52px);
+    line-height: 0.98;
+  }
+
+  .lead {
+    max-width: 570px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.34;
+  }
+
+  .button {
+    min-height: 38px;
+    font-size: 13.5px;
+  }
+
+  .device-stage {
+    width: min(610px, calc(100% - 96px));
+    height: clamp(300px, 42vh, 336px);
+  }
+
+  .laptop {
+    width: clamp(430px, 32vw, 492px);
+    height: clamp(260px, 36vh, 292px);
+  }
+
+  .phone {
+    width: clamp(118px, 9vw, 136px);
+    height: clamp(232px, 33vh, 270px);
+  }
+
+  .mini-layout > div:first-child {
+    padding-top: 34px;
+  }
+
+  .mini-layout h3 {
+    font-size: 22px;
+    line-height: 1.12;
+  }
+
+  .hero::after {
+    inset: auto 0 clamp(92px, 14vh, 120px);
+    height: clamp(104px, 16vh, 138px);
+  }
+
+  .hero-feature-strip {
+    padding-block: 12px;
+  }
+
+  .hero-feature-strip span {
+    gap: 12px;
+    font-size: clamp(13px, 0.98vw, 14px);
+  }
+
+  .hero-feature-strip .icon {
+    width: clamp(24px, 1.9vw, 27px);
+    height: clamp(24px, 1.9vw, 27px);
+    padding: 8px;
+    border-radius: 13px;
+  }
+}
+

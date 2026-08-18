@@ -109,6 +109,25 @@ Valores antes e depois em 1536 x 730 CSS:
 - Seções internas receberam compactação de padding e gaps em desktop para evitar alongamento artificial.
 - O mockup deixou de se comportar visualmente como uma segunda tela separada do texto principal.
 
+## Correção cirúrgica da primeira dobra
+
+- Capturas antes da correção: `hero-fold/before-hero-1536x730.png`, `hero-fold/before-hero-1440x800.png`, `hero-fold/before-hero-1366x768.png`, `hero-fold/before-hero-1280x720.png` e `hero-fold/before-hero-1920x900.png`.
+- Capturas depois da correção: `hero-fold/after-hero-1536x730.png`, `hero-fold/after-hero-1440x800.png`, `hero-fold/after-hero-1366x768.png`, `hero-fold/after-hero-1280x720.png` e `hero-fold/after-hero-1920x900.png`.
+- O diagnóstico encontrou o cabeçalho no fluxo normal, hero sem `overflow` vertical e barra no fluxo; a soma de texto, mockup e barra era maior que a altura útil nos desktops testados.
+- A correção ficou limitada ao hero desktop por altura: espaçamentos verticais, altura real do mockup, dimensões internas do mockup e padding/iconografia da barra. A versão mobile 390 x 844 permaneceu sem alteração nos valores medidos.
+
+Valores antes e depois:
+
+| Viewport CSS | Altura anterior do conjunto | Altura final do conjunto | Mockup antes | Mockup final | Barra antes | Barra final | `barBottom` final | Espaço restante |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1536 x 730 | 766.64px | 720px | 343.09px | 306.59px | 92px | 71px | 720px | 10px |
+| 1440 x 800 | 797.88px | 784px | 376px | 336px | 91.11px | 71px | 784px | 16px |
+| 1366 x 768 | 775.34px | 755.03px | 360.95px | 322.55px | 89.41px | 69.95px | 755.03px | 12.97px |
+| 1280 x 720 | 744.06px | 710px | 338.39px | 302.39px | 87.44px | 68.31px | 710px | 10px |
+| 1920 x 900 | 924.55px | 890.5px | 396px | 351px | 103.19px | 86.19px | 890.5px | 9.5px |
+
+Espaços verticais reduzidos no desktop baixo: `padding-top` do hero de 16px para ~10-13px; slogan/título/descrição de 7px/10px/14px para 5px/8px/10px; botões de 40px para 38px; barra de 16px por lado para 12px por lado; ícones da barra reduzidos proporcionalmente. A barra ficou ancorada com margem inferior de 10px e `margin-top: auto`, mantendo pelo menos 8px de segurança.
+
 ## Verificações técnicas
 
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
