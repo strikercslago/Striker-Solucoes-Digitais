@@ -18,7 +18,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 18,
@@ -90,25 +92,25 @@
       },
       {
         "id": "processo",
-        "top": 4068,
+        "top": 4307,
         "width": 1900,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4984,
+        "top": 5224,
         "width": 1900,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6904,
+        "top": 7143,
         "width": 1900,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9632,
+        "top": 9872,
         "width": 1900,
         "height": 804
       }
@@ -133,7 +135,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 12,
@@ -205,25 +209,25 @@
       },
       {
         "id": "processo",
-        "top": 3894,
+        "top": 4127,
         "width": 1536,
         "height": 917
       },
       {
         "id": "projetos",
-        "top": 4811,
+        "top": 5044,
         "width": 1536,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6722,
+        "top": 6955,
         "width": 1536,
         "height": 681
       },
       {
         "id": "contato",
-        "top": 9435,
+        "top": 9668,
         "width": 1536,
         "height": 796
       }
@@ -248,7 +252,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 12,
@@ -328,25 +334,25 @@
       },
       {
         "id": "processo",
-        "top": 3922,
+        "top": 4138,
         "width": 1440,
         "height": 858
       },
       {
         "id": "projetos",
-        "top": 4780,
+        "top": 4996,
         "width": 1440,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6692,
+        "top": 6908,
         "width": 1440,
         "height": 679
       },
       {
         "id": "contato",
-        "top": 9396,
+        "top": 9612,
         "width": 1440,
         "height": 796
       }
@@ -371,7 +377,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 12,
@@ -443,25 +451,25 @@
       },
       {
         "id": "processo",
-        "top": 3876,
+        "top": 4058,
         "width": 1366,
         "height": 853
       },
       {
         "id": "projetos",
-        "top": 4729,
+        "top": 4911,
         "width": 1366,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6577,
+        "top": 6759,
         "width": 1366,
         "height": 623
       },
       {
         "id": "contato",
-        "top": 9210,
+        "top": 9392,
         "width": 1366,
         "height": 796
       }
@@ -486,7 +494,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 12,
@@ -558,27 +568,144 @@
       },
       {
         "id": "processo",
-        "top": 3813,
+        "top": 3896,
         "width": 1280,
         "height": 846
       },
       {
         "id": "projetos",
-        "top": 4659,
+        "top": 4742,
         "width": 1280,
         "height": 1107
       },
       {
         "id": "sobre",
-        "top": 6497,
+        "top": 6580,
         "width": 1280,
         "height": 625
       },
       {
         "id": "contato",
-        "top": 9085,
+        "top": 9169,
         "width": 1280,
         "height": 796
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "tablet-768x1024",
+      "width": 768,
+      "height": 1024,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 768,
+      "innerHeight": 1024,
+      "devicePixelRatio": 1,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
+      "hero": {
+        "header": {
+          "top": 14,
+          "bottom": 84,
+          "width": 724,
+          "height": 70,
+          "visible": true
+        },
+        "slogan": {
+          "top": 132,
+          "bottom": 190,
+          "width": 340,
+          "height": 58,
+          "visible": true
+        },
+        "h1": {
+          "top": 202,
+          "bottom": 295,
+          "width": 736,
+          "height": 94,
+          "visible": true
+        },
+        "lead": {
+          "top": 309,
+          "bottom": 369,
+          "width": 732,
+          "height": 60,
+          "visible": true
+        },
+        "actions": {
+          "top": 389,
+          "bottom": 511,
+          "width": 728,
+          "height": 122,
+          "visible": true
+        },
+        "mockup": {
+          "top": 533,
+          "bottom": 785,
+          "width": 390,
+          "height": 252,
+          "visible": true
+        },
+        "strip": {
+          "top": 813,
+          "bottom": 956,
+          "width": 728,
+          "height": 143,
+          "visible": true
+        },
+        "stripStartsInFirstView": true,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 14,
+        "width": 724,
+        "height": 70
+      },
+      {
+        "id": "solucoes",
+        "top": 2551,
+        "width": 768,
+        "height": 1453
+      },
+      {
+        "id": "processo",
+        "top": 5686,
+        "width": 768,
+        "height": 1469
+      },
+      {
+        "id": "projetos",
+        "top": 7155,
+        "width": 768,
+        "height": 1755
+      },
+      {
+        "id": "sobre",
+        "top": 10224,
+        "width": 768,
+        "height": 1126
+      },
+      {
+        "id": "contato",
+        "top": 13745,
+        "width": 768,
+        "height": 1208
       }
     ]
   },
@@ -601,7 +728,9 @@
       "whatsappLinks": 4,
       "localWhatsappMentioned": true,
       "headerPosition": "relative",
-      "iconCount": 72,
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
       "hero": {
         "header": {
           "top": 14,
@@ -675,27 +804,144 @@
       },
       {
         "id": "processo",
-        "top": 6907,
+        "top": 6838,
         "width": 390,
         "height": 1679
       },
       {
         "id": "projetos",
-        "top": 8586,
+        "top": 8517,
         "width": 390,
         "height": 2257
       },
       {
         "id": "sobre",
-        "top": 12275,
+        "top": 12206,
         "width": 390,
         "height": 1200
       },
       {
         "id": "contato",
-        "top": 16177,
+        "top": 16107,
         "width": 390,
         "height": 1252
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "name": "narrow-360x800",
+      "width": 360,
+      "height": 800,
+      "screenshot": true
+    },
+    "metrics": {
+      "title": "STRIKER Soluções Digitais | Sites que posicionam",
+      "h1": "Uma presença digital à altura do seu negócio.",
+      "innerWidth": 360,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "bodyWidth": 360,
+      "whatsappLinks": 4,
+      "localWhatsappMentioned": true,
+      "headerPosition": "relative",
+      "iconCount": 71,
+      "benefitsCardCount": 6,
+      "segmentChipCount": 6,
+      "hero": {
+        "header": {
+          "top": 14,
+          "bottom": 84,
+          "width": 320,
+          "height": 70,
+          "visible": true
+        },
+        "slogan": {
+          "top": 132,
+          "bottom": 182,
+          "width": 340,
+          "height": 50,
+          "visible": true
+        },
+        "h1": {
+          "top": 194,
+          "bottom": 316,
+          "width": 328,
+          "height": 122,
+          "visible": true
+        },
+        "lead": {
+          "top": 330,
+          "bottom": 433,
+          "width": 324,
+          "height": 102,
+          "visible": true
+        },
+        "actions": {
+          "top": 453,
+          "bottom": 575,
+          "width": 320,
+          "height": 122,
+          "visible": true
+        },
+        "mockup": {
+          "top": 597,
+          "bottom": 829,
+          "width": 342,
+          "height": 232,
+          "visible": true
+        },
+        "strip": {
+          "top": 850,
+          "bottom": 992,
+          "width": 320,
+          "height": 142,
+          "visible": false
+        },
+        "stripStartsInFirstView": false,
+        "mockupAndCtasShareFirstView": true
+      },
+      "consoleErrors": [],
+      "faqOpen": true
+    },
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 14,
+        "width": 320,
+        "height": 70
+      },
+      {
+        "id": "solucoes",
+        "top": 3213,
+        "width": 360,
+        "height": 1609
+      },
+      {
+        "id": "processo",
+        "top": 7153,
+        "width": 360,
+        "height": 1705
+      },
+      {
+        "id": "projetos",
+        "top": 8858,
+        "width": 360,
+        "height": 2257
+      },
+      {
+        "id": "sobre",
+        "top": 12630,
+        "width": 360,
+        "height": 1189
+      },
+      {
+        "id": "contato",
+        "top": 16581,
+        "width": 360,
+        "height": 1304
       }
     ]
   }

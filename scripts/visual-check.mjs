@@ -16,7 +16,9 @@ const viewports = [
   { name: "desktop-1440x800", width: 1440, height: 800, screenshot: true },
   { name: "notebook-1366x768", width: 1366, height: 768, screenshot: true },
   { name: "compact-1280x720", width: 1280, height: 720, screenshot: true },
+  { name: "tablet-768x1024", width: 768, height: 1024, screenshot: true },
   { name: "mobile-390x844", width: 390, height: 844, screenshot: true },
+  { name: "narrow-360x800", width: 360, height: 800, screenshot: true },
 ];
 
 const browser = await chromium.launch();
@@ -52,6 +54,8 @@ for (const viewport of viewports) {
     localWhatsappMentioned: document.body.textContent.includes("(54) 99910-2656"),
     headerPosition: getComputedStyle(document.querySelector(".site-header")).position,
     iconCount: document.querySelectorAll("svg.icon").length,
+    benefitsCardCount: document.querySelectorAll(".benefits .benefit-card").length,
+    segmentChipCount: document.querySelectorAll(".audience .segment-chip").length,
     hero: ["header", "slogan", "h1", "lead", "actions", "mockup", "strip"].reduce((acc, key) => {
       const selector = {
         header: ".site-header",
@@ -99,6 +103,21 @@ for (const viewport of viewports) {
     await page.screenshot({
       path: `${outputDir}/scale/hero-${viewport.width}x${viewport.height}.png`,
       fullPage: false,
+    });
+  }
+
+  if (viewport.name === "desktop-1440x800" || viewport.name === "mobile-390x844") {
+    await page.locator(".benefits").scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.querySelector(".benefits")?.classList.contains("is-visible"));
+    await page.waitForTimeout(500);
+    await page.locator(".benefits").screenshot({
+      path: `${outputDir}/scale/benefits-${viewport.width}x${viewport.height}.png`,
+    });
+    await page.locator(".audience").scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.querySelector(".audience")?.classList.contains("is-visible"));
+    await page.waitForTimeout(500);
+    await page.locator(".audience").screenshot({
+      path: `${outputDir}/scale/audience-${viewport.width}x${viewport.height}.png`,
     });
   }
 

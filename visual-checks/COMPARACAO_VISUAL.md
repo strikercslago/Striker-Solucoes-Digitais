@@ -10,7 +10,13 @@ Capturas geradas:
 - `scale/hero-1440x800.png`
 - `scale/hero-1366x768.png`
 - `scale/hero-1280x720.png`
+- `scale/hero-768x1024.png`
 - `scale/hero-390x844.png`
+- `scale/hero-360x800.png`
+- `scale/benefits-1440x800.png`
+- `scale/audience-1440x800.png`
+- `scale/benefits-390x844.png`
+- `scale/audience-390x844.png`
 - Capturas auxiliares desktop da evolução visual: `scale/diagnosis-1440x800.png`, `scale/solutions-1440x800.png`, `scale/process-projects-1440x800.png`, `scale/social-founder-1440x800.png`, `scale/testimonial-final-1440x800.png`, `scale/contact-footer-1440x800.png`
 - Capturas auxiliares mobile da evolução visual: `scale/mobile-diagnosis-390x844.png`, `scale/mobile-solutions-390x844.png`, `scale/mobile-final-390x844.png`
 - Capturas auxiliares de inspeção mobile: `mobile-390-finalcta-viewport.png`, `mobile-390-contact-viewport.png`, `mobile-390-footer-viewport.png`
@@ -22,7 +28,9 @@ Capturas geradas:
 - 1440 x 800 CSS: `innerWidth=1440`, `innerHeight=800`, `devicePixelRatio=1`, sem overflow horizontal.
 - 1366 x 768 CSS: `innerWidth=1366`, `innerHeight=768`, `devicePixelRatio=1`, sem overflow horizontal.
 - 1280 x 720 CSS: `innerWidth=1280`, `innerHeight=720`, `devicePixelRatio=1`, sem overflow horizontal.
+- 768 x 1024 CSS: `innerWidth=768`, `innerHeight=1024`, `devicePixelRatio=1`, sem overflow horizontal.
 - 390 x 844 CSS: `innerWidth=390`, `innerHeight=844`, `devicePixelRatio=1`, sem overflow horizontal.
+- 360 x 800 CSS: `innerWidth=360`, `innerHeight=800`, `devicePixelRatio=1`, sem overflow horizontal.
 
 ## Interações verificadas
 
@@ -38,7 +46,9 @@ Capturas geradas:
 - Header: estático, com uma única instância e sem comportamento fixed/sticky.
 - Hero: composição reescalada para notebook Full HD em zoom 100%. Em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768 e 1280 x 720, cabeçalho, slogan, H1, parágrafo, CTAs, mockup principal e faixa de benefícios aparecem na mesma primeira tela. No viewport 1900 x 914, a faixa termina no fundo do viewport, eliminando o espaço vazio abaixo dela. No mobile 390 x 844, mensagem, CTAs e mockup principal aparecem como uma composição única; a faixa começa logo abaixo.
 - Diagnóstico e transição: cards com ícones lineares legíveis, transição escura compacta e mobile empilhado sem cortes laterais.
-- Soluções, benefícios e público: grid desktop preservado, seis benefícios obrigatórios implementados e chips mobile em largura integral, incluindo "Prestadores de serviço".
+- Soluções: grid desktop preservado, card destacado mantido e conteúdo aprovado sem alterações de integração.
+- O que muda: seção reconstruída em HTML/CSS com fundo azul-marinho, grade 3 x 2 no desktop, cards glassmorphism, cápsulas de ícones SVG, linhas de destaque e transição curva para a seção clara. No mobile, os seis cards empilham com ícones à esquerda, sem cortes ou overflow.
+- Para quem é: seção reconstruída em fundo frio claro, texto à esquerda e seis chips 3 x 2 no desktop; em mobile, chips 2 x 3, incluindo "Prestadores de serviço", sem recorte de texto.
 - Processo e projetos: timeline desktop com 7 etapas e linhas sem cruzar texto; mobile em lista vertical legível; placeholders honestos mantidos.
 - Redes sociais: removidos números e métricas fictícias; mockup usa elementos neutros de calendário, conteúdo, publicações e planejamento.
 - Fundador e depoimento: foto real de Rafael sem distorção, bloco do fundador em fluxo mobile correto e depoimento mantido como placeholder honesto.
@@ -57,6 +67,14 @@ Capturas geradas:
 
 Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem apenas diferenças P2/P3 ligadas a nuances de mockup, ícones e microespaçamentos, sem quebrar conteúdo, responsividade ou funcionalidade.
 
+## Reconstrução O que muda / Para quem é
+
+- Estrutura preservada em `app/page.tsx`: os dados aprovados continuam nas coleções `benefits` e `segments`; os IDs e âncoras existentes permanecem ativos.
+- Ícones usados: `shield`, `messageMore`, `spark`, `trending`, `panelHome`, `blocks`, `tooth`, `scale`, `stethoscope`, `mind`, `case` e `tool`, todos como SVG inline no componente `IconGlyph`.
+- A implementação não usa prints ou imagens rasterizadas das referências para montar as seções.
+- Comparação visual obrigatória: P0/P1 corrigidos; não há seção duplicada, conteúdo cortado, overflow horizontal, ícone ausente, CTA/formulário quebrado ou texto ilegível nos viewports testados.
+- Diferenças residuais P2/P3: a intensidade do blur e do brilho dos cards varia entre navegadores por limitação normal de `backdrop-filter`; quando o navegador reduz o efeito, o fallback mantém gradiente, borda e contraste.
+
 ## Correção de escala
 
 - Header reduzido e mantido como elemento estático no fluxo da página.
@@ -70,5 +88,5 @@ Nenhuma diferença P0 ou P1 foi encontrada após a segunda rodada. Permanecem ap
 
 - `npm run lint`: aprovado com 3 avisos conhecidos de `<img>` em `app/page.tsx`.
 - `npm test`: aprovado com Node 24 do runtime do Codex.
-- `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720 e 390 x 844.
+- `node scripts\visual-check.mjs`: aprovado em 1900 x 914, 1536 x 730, 1440 x 800, 1366 x 768, 1280 x 720, 768 x 1024, 390 x 844 e 360 x 800.
 - Checagem Playwright com movimento reduzido: `prefers-reduced-motion=true`, 39 elementos verificados, 0 ocultos por animação.

@@ -9,6 +9,7 @@ const iconPaths: Record<string, ReactNode> = {
   case: <><rect x="4" y="7" width="16" height="12" rx="2" /><path d="M9 7V5h6v2" /><path d="M4 12h16" /></>,
   chart: <><path d="M4 18 9 13l4 3 7-9" /><path d="M15 7h5v5" /></>,
   chat: <><path d="M5 5h14v10H9l-4 4V5Z" /><path d="M8 9h8" /><path d="M8 12h5" /></>,
+  blocks: <><rect x="4" y="4" width="6" height="6" rx="1.2" /><rect x="14" y="4" width="6" height="6" rx="1.2" /><rect x="4" y="14" width="6" height="6" rx="1.2" /><rect x="14" y="14" width="6" height="6" rx="1.2" /></>,
   check: <><circle cx="12" cy="12" r="9" /><path d="m8 12 3 3 5-6" /></>,
   close: <><path d="M6 6l12 12" /><path d="M18 6 6 18" /></>,
   devices: <><rect x="3" y="5" width="13" height="10" rx="1.5" /><rect x="17" y="9" width="4" height="8" rx="1" /><path d="M8 19h6" /><path d="M11 15v4" /></>,
@@ -18,20 +19,24 @@ const iconPaths: Record<string, ReactNode> = {
   lock: <><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>,
   mail: <><rect x="4" y="6" width="16" height="12" rx="2" /><path d="m4 8 8 6 8-6" /></>,
   medical: <><path d="M12 5v14" /><path d="M5 12h14" /><circle cx="12" cy="12" r="8" /></>,
+  messageMore: <><path d="M5 5h14v11H9l-4 4V5Z" /><path d="M9 11h.01" /><path d="M12 11h.01" /><path d="M15 11h.01" /></>,
   menu: <><path d="M5 7h14" /><path d="M5 12h14" /><path d="M5 17h14" /></>,
   mind: <><path d="M9 18H7a4 4 0 0 1-1-7.9A5.5 5.5 0 0 1 16.5 8c2.4.4 4.2 2.5 4.2 5 0 2.8-2.2 5-5 5H15" /><path d="M9 18c0-3 6-3 6 0" /></>,
   palette: <><path d="M12 4a8 8 0 0 0 0 16h1.5a2 2 0 0 0 1.7-3l-.2-.3a1.7 1.7 0 0 1 1.5-2.6H18a4 4 0 0 0 3.7-4.9A10 10 0 0 0 12 4Z" /><path d="M7.5 11h.01" /><path d="M10 7.5h.01" /><path d="M14 7.5h.01" /></>,
   pen: <><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="m13 7 4 4" /></>,
   pin: <><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></>,
   play: <><circle cx="12" cy="12" r="9" /><path d="m10 8 6 4-6 4V8Z" /></>,
+  panelHome: <><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M4 9h16" /><path d="m8 15 4-3 4 3" /><path d="M10 18v-4h4v4" /></>,
   post: <><rect x="5" y="4" width="14" height="16" rx="2" /><path d="M8 9h8" /><path d="M8 13h8" /><path d="M8 17h5" /></>,
   scale: <><path d="M12 4v16" /><path d="M5 7h14" /><path d="M7 7l-3 6h6L7 7Z" /><path d="M17 7l-3 6h6l-3-6Z" /></>,
   send: <><path d="m21 3-8.5 18-3-8-7.5-3L21 3Z" /><path d="m9.5 12.5 4-4" /></>,
   shield: <><path d="M12 3 4.5 6.2v5.5c0 4.8 3.2 7.9 7.5 9.3 4.3-1.4 7.5-4.5 7.5-9.3V6.2L12 3Z" /><path d="m8.8 12 2.2 2.2 4.5-5" /></>,
-  spark: <><path d="M12 3v5" /><path d="M12 16v5" /><path d="M3 12h5" /><path d="M16 12h5" /><path d="m6 6 3 3" /><path d="m15 15 3 3" /><path d="m18 6-3 3" /><path d="m9 15-3 3" /></>,
+  spark: <><path d="M12 3c1.6 4.5 4.5 7.4 9 9-4.5 1.6-7.4 4.5-9 9-1.6-4.5-4.5-7.4-9-9 4.5-1.6 7.4-4.5 9-9Z" /></>,
+  stethoscope: <><path d="M6 4v5a4 4 0 0 0 8 0V4" /><path d="M4 4h4" /><path d="M12 4h4" /><path d="M14 9a5 5 0 0 0 5 5v2.5a3.5 3.5 0 0 1-7 0V15" /><circle cx="19" cy="14" r="1.5" /></>,
   target: <><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path d="M12 3v3" /><path d="M21 12h-3" /></>,
   tool: <><path d="m14.7 6.3 3 3" /><path d="M5 19 16.5 7.5a3 3 0 0 0-4-4L11 5l3 3" /><path d="M4 20l1-4 3 3-4 1Z" /></>,
   tooth: <><path d="M8 4c1.5 0 2.5 1 4 1s2.5-1 4-1c2.2 0 4 1.8 4 4 0 4.6-2.8 12-5 12-1.2 0-1-4-3-4s-1.8 4-3 4c-2.2 0-5-7.4-5-12 0-2.2 1.8-4 4-4Z" /></>,
+  trending: <><path d="M4 18h16" /><path d="M6 16v-3" /><path d="M11 16v-6" /><path d="M16 16V7" /><path d="m6 10 5-4 4 2 4-5" /><path d="M15 3h4v4" /></>,
   user: <><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
 };
 
@@ -121,17 +126,17 @@ const solutionCards = [
 
 const benefits = [
   ["Mais autoridade", "Uma apresentação profissional aumenta a confiança em sua empresa.", "shield"],
-  ["Comunicação mais clara", "O visitante entende seus serviços e diferenciais com facilidade.", "chat"],
-  ["Melhor percepção de valor", "Sua empresa apresenta uma estrutura compatível com a qualidade do seu trabalho.", "target"],
-  ["Mais oportunidades de contato", "Cada seção orienta o usuário em direção ao próximo passo.", "send"],
-  ["Presença digital própria", "Um espaço digital que pertence à sua empresa e trabalha todos os dias.", "home"],
-  ["Estrutura preparada para crescer", "Uma base profissional para evoluir conteúdo, páginas e comunicação.", "chart"],
+  ["Comunicação mais clara", "O visitante entende seus serviços e diferenciais com facilidade.", "messageMore"],
+  ["Melhor percepção de valor", "Sua empresa apresenta uma estrutura compatível com a qualidade do seu trabalho.", "spark"],
+  ["Mais oportunidades de contato", "Cada seção orienta o usuário em direção ao próximo passo.", "trending"],
+  ["Presença digital própria", "Um espaço digital que pertence à sua empresa e trabalha todos os dias.", "panelHome"],
+  ["Estrutura preparada para crescer", "Uma base profissional para evoluir conteúdo, páginas e comunicação.", "blocks"],
 ];
 
 const segments = [
   ["Dentistas", "tooth"],
   ["Advogados", "scale"],
-  ["Médicos", "medical"],
+  ["Médicos", "stethoscope"],
   ["Psicólogos", "mind"],
   ["Consultores", "case"],
   ["Prestadores de serviço", "tool"],
@@ -485,16 +490,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="benefits section-tint reveal">
-        <div className="container centered">
+      <section className="benefits section-tint reveal" aria-labelledby="benefits-title">
+        <div className="container benefits-inner">
           <p className="eyebrow">O que muda</p>
-          <h2>Uma presença digital que trabalha a favor da sua empresa.</h2>
+          <h2 id="benefits-title">Uma presença digital que trabalha a favor da sua empresa.</h2>
           <div className="benefit-grid">
             {benefits.map(([title, text, icon]) => (
               <article className="benefit-card reveal-child" key={String(title)}>
-                <IconGlyph name={String(icon)} />
+                <span className="benefit-icon">
+                  <IconGlyph name={String(icon)} />
+                </span>
                 <div>
                   <h3>{title}</h3>
+                  <span className="benefit-rule" aria-hidden="true" />
                   <p>{text}</p>
                 </div>
               </article>
@@ -503,18 +511,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="audience section-light reveal">
+      <section className="audience section-light reveal" aria-labelledby="audience-title">
         <div className="container audience-grid">
-          <div>
+          <div className="audience-copy">
             <p className="eyebrow">Para quem é</p>
-            <h2>Para profissionais que querem ser reconhecidos pelo valor do próprio trabalho.</h2>
+            <h2 id="audience-title">Para profissionais que querem ser reconhecidos pelo valor do próprio trabalho.</h2>
             <p className="section-text">A STRIKER atende empresas e especialistas que precisam transformar competência em uma presença digital clara, confiável e preparada para gerar oportunidades.</p>
           </div>
-          <div className="segment-grid">
+          <div className="segment-grid" aria-label="Segmentos atendidos">
             {segments.map(([label, icon]) => (
-              <span key={String(label)}><IconGlyph name={String(icon)} />{label}</span>
+              <span className="segment-chip reveal-child" key={String(label)}><IconGlyph name={String(icon)} />{label}</span>
             ))}
-            <a href="#contato" onClick={handleAnchorClick}>Quero posicionar minha empresa <IconGlyph name="arrow" /></a>
           </div>
         </div>
       </section>
